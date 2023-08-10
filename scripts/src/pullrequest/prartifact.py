@@ -29,6 +29,24 @@ def get_modified_charts(api_url):
     return "", "", "", ""
 
 def get_modified_files(api_url):
+    """Get the list of modified files in a given GitHub pull request.
+
+    The list of modified files is available at the /files endpoint of api_url.
+    This endpoint is expected to return a list of changes. Those with the "filename"
+    key are returned by this function.
+
+    Args:
+        api_url (String): the GitHub pull request URL. (E.g. https://api.github.com/repos/openshift-helm-charts/charts/pulls/1)
+        
+    Returns:
+        A list of relative paths for files modified in the PR.
+
+    Example:
+        [
+            "charts/community/organization/chartname/0.0.1/chartname-0.0.1.tgz",
+            "charts/community/organization/chartname/0.0.1/report.yaml"
+        ]
+    """
     if not pr_files:
         page_number = 1
         max_page_size,page_size = 100,100
