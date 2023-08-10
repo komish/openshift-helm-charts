@@ -1,0 +1,9 @@
+chart:
+  name: gosnappass
+  shortDescription: Install GoSnappass using Helm
+publicPgpKey: null
+users:
+- githubUsername: komish
+vendor:
+  label: practiceroom
+  name: Practice Room
