@@ -223,6 +223,8 @@ def ensure_only_chart_is_modified(api_url, repository, branch):
             data = {"apiVersion": "v1",
                 "entries": {}}
 
+        # Check existing entries to ensure that this release doesn't already exist, and that its
+        # owned by this category-organization-chart
         entry_name = f"{organization}-{chart}"
         d = data["entries"].get(entry_name, [])
         # Note(komish): Also check for the new entry style where only the chart is added.
@@ -235,6 +237,16 @@ def ensure_only_chart_is_modified(api_url, repository, branch):
                 print(msg)
                 gitutils.add_output("pr-content-error-message",msg)
                 sys.exit(1)
+            
+            # TODO(komish): This is a PoC checking if an annotation would be the right approach to establishing ownership.
+            ownershipAnnotation = v["annotations"].get("charts.openshift.io/unique-identifier", "unknown")
+            if ownershipAnnotation != f"{category}-{organization}-{chart}":
+                msg = f"[ERROR] This chart does not appear to be owned by this submitter, and chart names must be globally unique."
+                print(msg)
+                gitutils.add_output("pr-content-error-message",msg)
+                if ownershipAnnotation == "unknown":
+                    print("[DEBUG] This chart's ownership annotation is missing! Maintainers must manual resolve this issue.")
+                sys.exit(2)
 
         # Check the repository's tags to make sure a tag doesn't already exist
         # for this chart, as we'll need to create one if we need to publish this
