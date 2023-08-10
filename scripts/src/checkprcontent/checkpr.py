@@ -108,6 +108,9 @@ def get_file_match_compiled_patterns():
 
 
 def ensure_only_chart_is_modified(api_url, repository, branch):
+    print(f"[TRACE] api_url={api_url}")
+    print(f"[TRACE] repository={repository}")
+    print(f"[TRACE] branch={branch}")
     label_names = prartifact.get_labels(api_url)
     for label_name in label_names:
         if label_name == ALLOW_CI_CHANGES:

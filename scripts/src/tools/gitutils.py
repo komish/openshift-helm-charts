@@ -162,5 +162,8 @@ def add_changes(repo,skip_files):
     return len(repo.index.diff("HEAD")) > 0
 
 def add_output(name,value):
+    # NOTE(KOMISH): DEBUG ADDITION
+    print(f"[DEBUG] Adding \"{name}={value}\" to GITHUB_OUTPUT")
+    # /NOTE(KOMISH): DEBUG ADDITION
     with open(os.environ['GITHUB_OUTPUT'],'a') as fh:
         print(f'{name}={value}',file=fh)
