@@ -119,14 +119,35 @@ def get_file_match_compiled_patterns():
 
 
 def ensure_only_chart_is_modified(api_url, repository, branch):
+    """Ensures that the pull request only modifies the appropriate files.
+
+    Examples of what may cause failures are:
+    - modifying multiple charts in a single PR
+    - creating an OWNERs file and submitting your chart in the same PR
+    - an existing release/tag for your chart in our repository.
+    - an existing entry in our index for your chart.
+
+    IF a failing case is found, this function will throw an error and write an
+    accompanying message that will be sent to the PR to inform the submitter of
+    issues they may need to resolve. This error is accompanied with a non-zero
+    exit code.
+    
+    Args:
+        api_url (String): the GitHub pull request URL. (E.g.https://api.github.com/repos/openshift-helm-charts/charts/pulls/1)
+        repository (String): The org/repository (E.g. openshift-helm-charts/charts)
+        branch (String): The branch in this repository that contains the Helm index to parse. (E.g. gh-pages)
+    """
+    # NOTE(KOMISH): DEBUG ADDITION
     print(f"[TRACE] api_url={api_url}")
     print(f"[TRACE] repository={repository}")
     print(f"[TRACE] branch={branch}")
+    # /NOTE(KOMISH): DEBUG ADDITION
     label_names = prartifact.get_labels(api_url)
     for label_name in label_names:
         if label_name == ALLOW_CI_CHANGES:
             return
 
+    # Parse modified files and look for anomalies.
     files = prartifact.get_modified_files(api_url)
     pattern, reportpattern, tarballpattern = get_file_match_compiled_patterns()
     matches_found = 0
@@ -211,6 +232,7 @@ def ensure_only_chart_is_modified(api_url, repository, branch):
             gitutils.add_output("pr-content-error-message", msg)
             sys.exit(1)
 
+        # Pull the index and make sure that no existing entry at the specified version exist.
         print("Downloading index.yaml", category, organization, chart, version)
         r = requests.get(
             f"https://raw.githubusercontent.com/{repository}/{branch}/index.yaml"
@@ -223,7 +245,10 @@ def ensure_only_chart_is_modified(api_url, repository, branch):
 
         entry_name = f"{organization}-{chart}"
         d = data["entries"].get(entry_name, [])
-        gitutils.add_output("chart-entry-name", entry_name)
+        # Note(komish): Also check for the new entry style where only the chart is added.
+        d += data["entries"].get(chart, [])
+        # gitutils.add_output("chart-entry-name",entry_name)
+        gitutils.add_output("chart-entry-name",chart) # TODO(komish): See what happens if we just pull the org out of this value.
         for v in d:
             if v["version"] == version:
                 msg = f"[ERROR] Helm chart release already exists in the index.yaml: {version}"
@@ -231,6 +256,9 @@ def ensure_only_chart_is_modified(api_url, repository, branch):
                 gitutils.add_output("pr-content-error-message", msg)
                 sys.exit(1)
 
+        # Check the repository's tags to make sure a tag doesn't already exist
+        # for this chart, as we'll need to create one if we need to publish this
+        # chart.
         tag_name = f"{organization}-{chart}-{version}"
         gitutils.add_output("release_tag", tag_name)
         tag_api = f"https://api.github.com/repos/{repository}/git/ref/tags/{tag_name}"
