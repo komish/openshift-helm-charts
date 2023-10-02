@@ -201,7 +201,11 @@ def ensure_only_chart_is_modified(api_url, repository, branch):
         gitutils.add_output(
             "category", f"{'partner' if category == 'partners' else category}"
         )
+        # Note(komish) category_dir is a workaround because we change
+        # partners to partner above.
+        gitutils.add_output("category_dir", category)
         gitutils.add_output("organization", organization)
+        gitutils.add_output("chart", chart)
 
         if not semver.VersionInfo.isvalid(version):
             msg = (
