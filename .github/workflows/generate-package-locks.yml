@@ -33,7 +33,7 @@ jobs:
         id: generate-package-locks
         run: |
           set -o pipefail
-          python scripts/packagemapping/packagemapping.py | tee /tmp/packagelocks.json
+          python scripts/src/packagemapping/packagemapping.py | tee /tmp/packagelocks.json
           base64 -w 0 /tmp/packagelocks.json | tee /tmp/packagelocks.json.b64
           echo "package_locks_b64=$(cat /tmp/packagelocks.json.b64)" >> $GITHUB_OUTPUT
       - name: Decode and display lockfile JSON (Sanity Check)
@@ -99,11 +99,11 @@ jobs:
           cd docs
           test -n "${{ needs.generate-package-locks.outputs.package_locks_b64 }}" \
             || { echo "::error::output package_locks_b64 did not contain base64 content generated from the previous step"; exit 2 ;}
-          echo ${{ needs.generate-package-locks.outputs.package_locks_b64 }} | base64 -d | jq > lock.json \
+          echo ${{ needs.generate-package-locks.outputs.package_locks_b64 }} | base64 -d | jq > chart-locks.json \
             || { echo "::error::output package_locks_b64 did not contain valid JSON once decoded" ; exit 3 ;}
-          md5sum=$(md5sum lock.json | awk '{ print $1 }' )
+          md5sum=$(md5sum chart-locks.json | awk '{ print $1 }' )
           echo new_lockfile_md5sum=$md5sum >> $GITHUB_OUTPUT
-          git add lock.json
+          git add chart-locks.json
           git commit -m "updating package lock file"
           git push origin ${{ steps.create-branch.outputs.branchname }}
           
