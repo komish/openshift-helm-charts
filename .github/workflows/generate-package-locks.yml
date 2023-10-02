@@ -54,7 +54,7 @@ jobs:
         id: compare-package-locks
         run: |
           needsupdating=false
-          wget ${{ env.LOCKFILE_URL }} -O current-locks.json
+          wget ${{ env.LOCK_FILE_URL }} -O current-locks.json
           set -o pipefail
           test -n "${{ needs.generate-package-locks.outputs.package_locks_b64 }}" \
             || { echo "::error::output package_locks_b64 did not contain base64 content generated from the previous step"; exit 2 ;}
