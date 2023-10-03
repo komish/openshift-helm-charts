@@ -70,7 +70,7 @@ jobs:
     needs: 
     - compare-package-lock-manifests
     - generate-package-locks
-    if: needs.compare-package-lock-manifests.outputs.needs-updating == true 
+    if: ${{ needs.compare-package-lock-manifests.outputs.needs-updating }} == true 
     runs-on: ubuntu-latest
     steps:
       - name: Clone ${{ env.PR_DEST_BRANCH_NAME }} branch
