@@ -49,7 +49,7 @@ def main():
             logError(
                 f"did not successfully parse the input. Did you run this in the right place? filename: {filename}",
             )
-            continue
+            # continue
             sys.exit(1)
             
         category, organization, chart = matched.groups()
