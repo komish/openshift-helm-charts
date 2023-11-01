@@ -35,3 +35,6 @@ MANIFEST
 
 # Virtual Envs
 venv.*/
+
+# Development Files
+github-output.txt
