@@ -1,0 +1,69 @@
+name: Ensure Submitter Validity
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review, labeled]
+    paths:
+      - 'charts/**'
+
+jobs:
+  get-pr-content:
+    runs-on: ubuntu-22.04
+    outputs:
+      chart: ${{ steps.check_pr_content.outputs.chart }}
+      organization: ${{ steps.check_pr_content.outputs.organization }}
+      category_dir: ${{ steps.check_pr_content.outputs.category_dir }}
+    name: Extract Category, Org, and Chart name
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.x Part 1
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Set up Python 3.x Part 2
+        run: |
+          # set up python
+          python3 -m venv ve1
+          cd scripts && ../ve1/bin/pip3 install -r requirements.txt && cd ..
+          cd scripts && ../ve1/bin/python3 setup.py install && cd ..
+
+      - name: Set Environment
+        id: set-env
+        run: |
+          #set environment based on repository
+          if [ $GITHUB_REPOSITORY == "openshift-helm-charts/charts" ]; then
+            echo "Use latest verifier image"
+            echo "verifier-action-image=latest" >> $GITHUB_OUTPUT
+          else
+            echo "Use dev verifier image"
+            echo "verifier-action-image=0.1.0" >> $GITHUB_OUTPUT
+          fi
+          echo "insecure_skip_tls_verify=true" >> $GITHUB_OUTPUT
+
+      - name: Checkout PR Branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          path: "pr-branch"
+
+
+      - name: Check PR Content
+        id: check_pr_content
+        env:
+          GITHUB_REF: ${{ github.ref }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: |
+          INDEX_BRANCH=$(if [ "${GITHUB_REF}" = "refs/heads/main" ]; then echo "refs/heads/gh-pages"; else echo "${GITHUB_REF}-gh-pages"; fi)
+           ./ve1/bin/check-pr-content --index-branch=${INDEX_BRANCH} --repository=${{ github.repository }} --api-url=${{ github.event.pull_request._links.self.href }}
+  ensure-valid-submitter:
+    uses: ./.github/workflows/check-chart-locks.yml
+    needs:
+    - get-pr-content
+    with:
+      category: ${{ needs.get-pr-content.outputs.category_dir }}
+      organization: ${{ needs.get-pr-content.outputs.organization }}
+      chartname: ${{ needs.get-pr-content.outputs.chart }}
