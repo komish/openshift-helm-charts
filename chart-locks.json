@@ -1,5 +1,5 @@
 {
-  "generated": "2023-11-08T15:45:03.512004-06:00",
+  "generated": "2023-11-09T22:07:19.417715+00:00",
   "packages": {
     "1946": "partners/redhat-test/1946",
     "3e4r5": "partners/redhat-test/3e4r5",
@@ -92,6 +92,7 @@
     "gitlab": "partners/gitlab/gitlab",
     "gloo-ee-helm": "partners/solo-io/gloo-ee-helm",
     "gloo-mesh-enterprise": "partners/solo-io/gloo-mesh-enterprise",
+    "gosnappass": "partners/concerthall/gosnappass",
     "helm-1s-project": "partners/test-ext-helm/helm-1s-project",
     "helm-chart-internal-1627019053": "partners/bpm-test-registry-namespace/helm-chart-internal-1627019053",
     "helm-chart-internal-1627019310": "partners/bpm-test-registry-namespace/helm-chart-internal-1627019310",
