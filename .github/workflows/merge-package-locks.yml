@@ -79,12 +79,12 @@ jobs:
         id: get-previous-package-count
         run: |
           pwd; ls -lah
-          length=$(jq '.packages | length ' < base-branch/docs/lock.json )
+          length=$(jq '.packages | length ' < base-branch/chart-locks.json )
           echo previous-package-count=$length >> $GITHUB_OUTPUT
       - name: Determine new count of packages
         id: get-new-package-count
         run: |
-          length=$(jq '.packages | length ' < docs/lock.json )
+          length=$(jq '.packages | length ' < chart-locks.json )
           echo new-package-count=$length >> $GITHUB_OUTPUT
       - name: Ensure the difference is only a single package
         uses: actions/github-script@v6
