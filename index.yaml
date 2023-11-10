@@ -24,6 +24,248 @@ entries:
     urls:
     - https://github.com/a10networks/tkc-doc/raw/master/charts/a10tkc-0.2.0.tgz
     version: 0.2.0
+  backstage:
+  - annotations:
+      charts.openshift.io/digest: sha256:8b39a5f3ea491cf8d3623a24b73d811324a33620672bef4ee7ebaf358d7b187c
+      charts.openshift.io/lastCertifiedTimestamp: '2023-05-25T14:03:05.890056+00:00'
+      charts.openshift.io/provider: Janus IDP
+      charts.openshift.io/providerType: community
+      charts.openshift.io/submissionTimestamp: '2023-05-25T14:03:34.222995+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: N/A
+    apiVersion: v2
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - alias: upstream
+      name: backstage
+      repository: https://backstage.github.io/charts
+      version: 1.x.x
+    description: A Helm chart for deploying a Backstage application
+    digest: 7ab617d81acc65640d1afc39130a89261d806f9c33040906c6e2c22b7454dd09
+    home: https://janus-idp.io
+    icon: https://avatars.githubusercontent.com/u/117844786
+    keywords:
+    - backstage
+    - idp
+    - janus-idp
+    kubeVersion: '>= 1.19.0-0'
+    maintainers:
+    - name: Janus-IDP
+      url: https://janus-idp.io
+    name: backstage
+    sources:
+    - https://github.com/janus-idp/helm-backstage
+    - https://github.com/janus-idp/backstage-showcase
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.0.1/backstage-2.0.1.tgz
+    version: 2.0.1
+  - annotations:
+      charts.openshift.io/digest: sha256:e9bc77a98396c21e091ade7ee279eda32da8da0efcea091e4a93c1f6438ea769
+      charts.openshift.io/lastCertifiedTimestamp: '2023-06-08T21:28:23.357174+00:00'
+      charts.openshift.io/provider: Janus IDP
+      charts.openshift.io/providerType: community
+      charts.openshift.io/submissionTimestamp: '2023-06-08T21:29:20.843722+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: '4.12'
+    apiVersion: v2
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - alias: upstream
+      name: backstage
+      repository: https://backstage.github.io/charts
+      version: 1.x.x
+    description: A Helm chart for deploying a Backstage application
+    digest: 2347b9b59ff56167eb412ad5b13c48f0ad9cb4d8f4534df4acea8c82892dcb1c
+    home: https://janus-idp.io
+    icon: https://avatars.githubusercontent.com/u/117844786
+    keywords:
+    - backstage
+    - idp
+    - janus-idp
+    kubeVersion: '>= 1.19.0-0'
+    maintainers:
+    - name: Janus-IDP
+      url: https://janus-idp.io
+    name: backstage
+    sources:
+    - https://github.com/janus-idp/helm-backstage
+    - https://github.com/janus-idp/backstage-showcase
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.0.2/backstage-2.0.2.tgz
+    version: 2.0.2
+  - annotations:
+      charts.openshift.io/digest: sha256:b23bd3b7ce11d43df24dc12903e6c90f1f23e281ed9fa5b74b15f0333119293e
+      charts.openshift.io/lastCertifiedTimestamp: '2023-06-16T18:28:30.876466+00:00'
+      charts.openshift.io/provider: Janus IDP
+      charts.openshift.io/providerType: community
+      charts.openshift.io/submissionTimestamp: '2023-06-16T18:29:30.665171+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: '4.12'
+    apiVersion: v2
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - alias: upstream
+      name: backstage
+      repository: https://backstage.github.io/charts
+      version: 1.x.x
+    description: A Helm chart for deploying a Backstage application
+    digest: d9a743c71893654424a1e84e564e630ae56d70dbdb0d412a81b87ea2989d61c0
+    home: https://janus-idp.io
+    icon: https://avatars.githubusercontent.com/u/117844786
+    keywords:
+    - backstage
+    - idp
+    - janus-idp
+    kubeVersion: '>= 1.19.0-0'
+    maintainers:
+    - name: Janus-IDP
+      url: https://janus-idp.io
+    name: backstage
+    sources:
+    - https://github.com/janus-idp/helm-backstage
+    - https://github.com/janus-idp/backstage-showcase
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.0.3/backstage-2.0.3.tgz
+    version: 2.0.3
+  - annotations:
+      charts.openshift.io/digest: sha256:836e867c833c12a1263bb6538af1eb060e5f2680e33abb3745329a2a81c75dc6
+      charts.openshift.io/lastCertifiedTimestamp: '2023-06-20T19:32:57.603527+00:00'
+      charts.openshift.io/provider: Janus IDP
+      charts.openshift.io/providerType: community
+      charts.openshift.io/submissionTimestamp: '2023-06-20T19:33:51.182317+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: '4.12'
+    apiVersion: v2
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - alias: upstream
+      name: backstage
+      repository: https://backstage.github.io/charts
+      version: 1.x.x
+    description: A Helm chart for deploying a Backstage application
+    digest: 27f533268c740995656825752b3b651c69bdcd4befc3a42d82f4bb51a915e6e1
+    home: https://janus-idp.io
+    icon: https://avatars.githubusercontent.com/u/117844786
+    keywords:
+    - backstage
+    - idp
+    - janus-idp
+    kubeVersion: '>= 1.19.0-0'
+    maintainers:
+    - name: Janus-IDP
+      url: https://janus-idp.io
+    name: backstage
+    sources:
+    - https://github.com/janus-idp/helm-backstage
+    - https://github.com/janus-idp/backstage-showcase
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.1.0/backstage-2.1.0.tgz
+    version: 2.1.0
+  - annotations:
+      charts.openshift.io/digest: sha256:b71f43f61735d8e591e0d50f668e3ed2c6eabc12f8c88e0086e06396722cd225
+      charts.openshift.io/lastCertifiedTimestamp: '2023-06-26T14:51:06.360068+00:00'
+      charts.openshift.io/provider: Janus IDP
+      charts.openshift.io/providerType: community
+      charts.openshift.io/submissionTimestamp: '2023-06-26T14:52:01.486969+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: '4.12'
+    apiVersion: v2
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.4.0
+    - alias: upstream
+      name: backstage
+      repository: https://backstage.github.io/charts
+      version: 1.1.2
+    description: A Helm chart for deploying a Backstage application
+    digest: 586bd79b405f49a5f574d2f6e843a7a3d821e2270d417eae1d6b99327c22d230
+    home: https://janus-idp.io
+    icon: https://avatars.githubusercontent.com/u/117844786
+    keywords:
+    - backstage
+    - idp
+    - janus-idp
+    kubeVersion: '>= 1.19.0-0'
+    maintainers:
+    - name: Janus-IDP
+      url: https://janus-idp.io
+    name: backstage
+    sources:
+    - https://github.com/janus-idp/helm-backstage
+    - https://github.com/janus-idp/backstage-showcase
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.2.0/backstage-2.2.0.tgz
+    version: 2.2.0
+  - annotations:
+      artifacthub.io/category: integration-delivery
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: "- name: support\n  url: https://github.com/janus-idp/helm-backstage/issues\n-
+        name: Chart Source\n  url: https://github.com/janus-idp/helm-backstage\n-
+        name: Default Image Source\n  url: https://github.com/janus-idp/backstage-showcase\n"
+      charts.openshift.io/digest: sha256:f5b307e53262859f8a396ce565b02272ec508b04935a584752a496a14e26b128
+      charts.openshift.io/lastCertifiedTimestamp: '2023-09-12T17:06:14.873334+00:00'
+      charts.openshift.io/name: Backstage
+      charts.openshift.io/provider: Janus IDP
+      charts.openshift.io/providerType: community
+      charts.openshift.io/submissionTimestamp: '2023-09-12T17:06:57.487922+00:00'
+      charts.openshift.io/supportURL: https://github.com/janus-idp/helm-backstage/issues
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: N/A
+    apiVersion: v2
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.9.1
+    - alias: upstream
+      name: backstage
+      repository: https://backstage.github.io/charts
+      version: 1.2.0
+    description: A Helm chart for deploying a Backstage application
+    digest: 129bbb648270f51edfbdad4cc1546547ffabd0381f2fa4d09130a2ee01cea582
+    home: https://janus-idp.io
+    icon: https://avatars.githubusercontent.com/u/117844786
+    keywords:
+    - backstage
+    - idp
+    - janus-idp
+    kubeVersion: '>= 1.19.0-0'
+    maintainers:
+    - name: Janus-IDP
+      url: https://janus-idp.io
+    name: backstage
+    sources:
+    - https://github.com/janus-idp/helm-backstage
+    - https://github.com/janus-idp/backstage-showcase
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.4.0/backstage-2.4.0.tgz
+    version: 2.4.0
   bks400:
   - annotations:
       charts.openshift.io/archs: x86_64
@@ -53,6 +295,146 @@ entries:
     urls:
     - https://github.com/Broadpeak-tv/Openshift/raw/main/Certification/bks400-0.2.0.tgz
     version: 0.2.0
+  bpjstk-service:
+  - annotations:
+      charts.openshift.io/digest: sha256:59170c18b61fac0926d8d12f70914502b282b9fd66b1ab062ab99aabbae7974c
+      charts.openshift.io/lastCertifiedTimestamp: '2023-06-11T12:51:20.439212+07:00'
+      charts.openshift.io/provider: PT. Multipolar Tbk
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-06-11T05:54:24.738943+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.12'
+    apiVersion: v2
+    appVersion: 1.0.0
+    description: BPJSTK Multichannel Payment Gateway
+    digest: 0d3f151c28fa81ccd206896da8e6ae29d561c6bc27f0201ef69daec7d859a668
+    kubeVersion: '>=1.20.0'
+    name: bpjstk-service
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/multipolar-bpjstk-service-1.0.0/bpjstk-service-1.0.0.tgz
+    version: 1.0.0
+  canvas-dmid:
+  - annotations:
+      charts.openshift.io/digest: sha256:947a298988ef9d58d9efd7d443f09ea8679dd4f177cdefd92da0fa036cab83e7
+      charts.openshift.io/lastCertifiedTimestamp: '2023-05-10T15:05:16.249174+00:00'
+      charts.openshift.io/provider: Telenity Iletisim Sistemleri Sa
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-05-10T15:05:54.991057+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
+      charts.openshift.io/testedOpenShiftVersion: '4.12'
+    apiVersion: v2
+    appVersion: 0.0.0
+    description: Canvas DMID Helm Chart
+    digest: 8574bdbbbb0c168eb9de7dcb1576ab0cc1de06ece63fd8f9731eb7380d1f59e6
+    kubeVersion: '>=v1.21.2'
+    maintainers:
+    - email: info@telenity.com
+      name: Telenity
+      url: https://www.telenity.com
+    name: canvas-dmid
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/telenity-canvas-dmid-3.0.1/canvas-dmid-3.0.1.tgz
+    version: 3.0.1
+  canvas-oamportal:
+  - annotations:
+      charts.openshift.io/digest: sha256:66b9a3f252e9a46fe7b1b6af68bc9d24798e85eb75280fdcaa02c23a6982ea5b
+      charts.openshift.io/lastCertifiedTimestamp: '2023-05-10T19:35:01.511479+00:00'
+      charts.openshift.io/provider: Telenity Iletisim Sistemleri Sa
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-05-10T19:35:37.574873+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
+      charts.openshift.io/testedOpenShiftVersion: '4.12'
+    apiVersion: v2
+    appVersion: 3.0.24-SNAPSHOT
+    description: Canvas OAM Portal Helm Chart
+    digest: eefead11241ab42057da5c1eda588608bb9cd6a587079d732b4c981a15dd967a
+    kubeVersion: '>=v1.21.2'
+    maintainers:
+    - email: info@telenity.com
+      name: Telenity
+      url: https://www.telenity.com
+    name: canvas-oamportal
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/telenity-canvas-oamportal-3.0.24-SNAPSHOT/canvas-oamportal-3.0.24-SNAPSHOT.tgz
+    version: 3.0.24-SNAPSHOT
+  canvas-platform:
+  - annotations:
+      charts.openshift.io/digest: sha256:834a104fd3250558a8d838001f54fc398e6e72fda9e282342448738ae849264c
+      charts.openshift.io/lastCertifiedTimestamp: '2023-05-16T17:48:34.588294-04:00'
+      charts.openshift.io/provider: Telenity Iletisim Sistemleri Sa
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-05-16T21:52:38.222976+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.8'
+      charts.openshift.io/testedOpenShiftVersion: '4.8'
+    apiVersion: v2
+    appVersion: 3.0.0
+    dependencies:
+    - alias: dmid
+      condition: dmid.enabled
+      name: canvas-dmid
+      repository: https://nexus.telenity.com/repository/helm-telenity/
+      version: ^3
+    description: Canvas Platform Helm Chart
+    digest: acead6e0ab12f430aa463b6a31d7f48ebe9cbd825d9f30ce18a4bd626186b4c0
+    kubeVersion: '>=1.21.0'
+    maintainers:
+    - email: info@telenity.com
+      name: Telenity
+      url: https://www.telenity.com
+    name: canvas-platform
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/telenity-canvas-platform-3.1.5/canvas-platform-3.1.5.tgz
+    version: 3.1.5
+  carbonio:
+  - annotations:
+      charts.openshift.io/digest: sha256:a93c347dd88ce22a68a4c2ecb7d6c05c211db6c297b57cdd912403ee5e578857
+      charts.openshift.io/lastCertifiedTimestamp: '2023-03-23T16:45:33.120585+01:00'
+      charts.openshift.io/provider: Zextras Srl
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-03-23T15:47:44.670235+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.2'
+      charts.openshift.io/testedOpenShiftVersion: '4.11'
+    apiVersion: v2
+    appVersion: 23.2.0
+    description: Official Zextras Carbonio Chart
+    digest: 18d8aa3bfaca1be4b04f01dc4fa29ccb8e2b00b01422b8a08579799fc652f0b5
+    home: https://www.zextras.com/carbonio
+    icon: https://www.zextras.com/images/carbonio_white.webp
+    keywords:
+    - carbonio
+    - email
+    - collaboration
+    - groupware
+    kubeVersion: '>= 1.14.0-0'
+    name: carbonio
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/zextras-carbonio-23.2.0/carbonio-23.2.0.tgz
+    version: 23.2.0
+  - annotations:
+      charts.openshift.io/digest: sha256:426742689a9ea566f48b8a28424eeb82cbad385d0ef0a4be350f6369795bc12b
+      charts.openshift.io/lastCertifiedTimestamp: '2023-03-23T18:10:46.447224+01:00'
+      charts.openshift.io/provider: Zextras Srl
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-03-23T17:15:08.856475+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.2'
+      charts.openshift.io/testedOpenShiftVersion: '4.11'
+    apiVersion: v2
+    appVersion: 23.3.0
+    description: Official Zextras Carbonio Chart
+    digest: 64743919a2160901d75b3c33b59336274af05c6573ee280e2da94cce9f53f0aa
+    home: https://www.zextras.com/carbonio
+    icon: https://www.zextras.com/images/carbonio_white.webp
+    keywords:
+    - carbonio
+    - email
+    - collaboration
+    - groupware
+    kubeVersion: '>= 1.14.0-0'
+    name: carbonio
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/zextras-carbonio-23.3.0/carbonio-23.3.0.tgz
+    version: 23.3.0
   castai-agent:
   - annotations:
       charts.openshift.io/digest: sha256:b3c7c29c5aa3e15db68cebd0f340385921539d79e6a9afd09756e38ae766913a
@@ -72,6 +454,52 @@ entries:
     urls:
     - https://github.com/openshift-helm-charts/charts/releases/download/castai-castai-agent-0.52.0/castai-agent-0.52.0.tgz
     version: 0.52.0
+  dsm-secrets-injector-chart:
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
+      charts.openshift.io/digest: sha256:492efc99f1c44f9a854b916859732a067bb1500795856b97f890cd1e0b672ffc
+      charts.openshift.io/lastCertifiedTimestamp: '2021-08-11T08:00:19.068501+00:00'
+      charts.openshift.io/provider: Fortanix
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-08-11T09:52:43.903021+00:00'
+    apiVersion: v2
+    appVersion: '1.0'
+    dependencies:
+    - name: fortanix-cert-setup
+      repository: file://cert-setup
+      version: '1.1'
+    digest: 75eea9fd654f060dee68bf936a7cf413e2587a0a6b685d7bc1b8421bda8ebd5e
+    kubeVersion: '>= 1.16.0 < 1.22.0'
+    maintainers:
+    - email: aman.ahuja@fortanix.com
+      name: Aman Ahuja
+    name: dsm-secrets-injector-chart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/fortanix-dsm-secrets-injector-chart-2.0/fortanix-dsm-secrets-injector-chart-2.0.tgz
+    version: '2.0'
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.6'
+      charts.openshift.io/digest: sha256:a0969bf498847f6ed19b4b35dc30a7ac4183640a105d86ac37c1c8032fb2226a
+      charts.openshift.io/lastCertifiedTimestamp: '2021-09-06T13:35:02.516167+00:00'
+      charts.openshift.io/provider: Fortanix
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-09-15T16:16:28.446206+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: 4.3 - 4.8
+    apiVersion: v2
+    appVersion: '1.0'
+    dependencies:
+    - name: fortanix-cert-setup
+      repository: file://cert-setup
+      version: '1.1'
+    digest: 8ecd9293d8bd594b26955d20e722495730648df5c95334de9bbe3dcf09a0c4d0
+    kubeVersion: '>= 1.16.0 < 1.22.0'
+    maintainers:
+    - email: aman.ahuja@fortanix.com
+      name: Aman Ahuja
+    name: dsm-secrets-injector-chart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/fortanix-dsm-secrets-injector-chart-2.2-4.6/fortanix-dsm-secrets-injector-chart-2.2-4.6.tgz
+    version: 2.2-4.6
   dxemssql:
   - annotations:
       charts.openshift.io/digest: sha256:bba38b72bd647ead19350b86ec60253d203d9465d75efd4c25d210110b77d789
@@ -157,128 +585,6 @@ entries:
     urls:
     - https://charts.test.exate.co/chartrepo/exate-apigator/charts/exateapigator-0.3.0.tgz
     version: 0.3.0
-  uv-helm:
-  - annotations:
-      charts.openshift.io/digest: sha256:4e7e593c0f1e3fd1d8b984122516d56d5c82035b6da313aac9c8ef12da64173a
-      charts.openshift.io/lastCertifiedTimestamp: '2022-09-23T20:35:00.390109+08:00'
-      charts.openshift.io/provider: EXFO Inc.
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-09-23T12:57:32.941284+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
-    apiVersion: v2
-    appVersion: 0.2.0
-    description: A Helm chart for Kubernetes
-    digest: e22a5b5f5f7159c1af3f6ae7d06ff219f6a2fa075aa8e500b27ebc93ecaac77c
-    icon: https://www.exfo.com/dist/atomic/organism/o-header/o-header-banner/exfo.png
-    kubeVersion: '>=1.20.0-0'
-    name: uv-helm
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/exfo-uv-helm-0.1.3/exfo-uv-helm-0.1.3.tgz
-    version: 0.1.3
-  uverifier:
-  - annotations:
-      charts.openshift.io/digest: sha256:74fa80d28a46d9da1ae7a74bc050449164389a358bd13bd2fb2a23d4770a9206
-      charts.openshift.io/lastCertifiedTimestamp: '2022-07-20T16:33:20.993665+08:00'
-      charts.openshift.io/provider: EXFO Inc.
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-07-20T08:38:02.575174+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
-    apiVersion: v2
-    appVersion: 0.2.0
-    description: A Helm chart for Kubernetes
-    digest: 388968518305560104f0422c70cb9a1511415779ebf65fd2d2ae915eda544c7e
-    icon: https://www.exfo.com/dist/atomic/organism/o-header/o-header-banner/exfo.png
-    kubeVersion: '>=1.20.0-0'
-    name: uverifier
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/exfo-uverifier-0.1.2/exfo-uverifier-0.1.2.tgz
-    version: 0.1.2
-  orion-ld:
-  - annotations:
-      charts.openshift.io/digest: sha256:7e67553ee7d697bed1b7d40a9d1c3ed1d724e32c7894c43629b5c156718aa3dd
-      charts.openshift.io/lastCertifiedTimestamp: '2022-01-19T16:19:54.899727+00:00'
-      charts.openshift.io/provider: FIWARE FOUNDATION E V
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-01-19T16:26:11.553809+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: '4.6'
-    apiVersion: v2
-    appVersion: 1.0.1
-    description: A Helm chart for running the fiware orion-ld context broker on kubernetes.
-    digest: 1d0303e3045755f86f9065eb4d901fa7364696ddd7e0d164fb3b165ddb3fa0a1
-    home: https://github.com/FIWARE/context.Orion-LD
-    icon: https://fiware.github.io/catalogue/img/fiware.png
-    keywords:
-    - fiware
-    - orion-ld
-    kubeVersion: '>= 1.19'
-    maintainers:
-    - email: stefan.wiedemann@fiware.org
-      name: wistefan
-    name: orion-ld
-    sources:
-    - https://github.com/FIWARE/context.Orion-LD
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/fiware-orion-ld-1.0.1/fiware-orion-ld-1.0.1.tgz
-    version: 1.0.1
-  - annotations:
-      charts.openshift.io/digest: sha256:0d92b66be3aa627001ab8c9e86c3c9eeb8f1d1da2c722576e72e2f446c11ca6c
-      charts.openshift.io/lastCertifiedTimestamp: '2022-02-22T14:56:04.991993+00:00'
-      charts.openshift.io/provider: FIWARE FOUNDATION E V
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-02-22T15:00:08.424853+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: '4.6'
-    apiVersion: v2
-    appVersion: 1.0.1
-    description: A Helm chart for running the fiware orion-ld context broker on kubernetes.
-    digest: b01f25461d6279499d75498232db215cd8c27d848cf653f6b1ba32551f2e3df6
-    home: https://github.com/FIWARE/context.Orion-LD
-    icon: https://fiware.github.io/catalogue/img/fiware.png
-    keywords:
-    - fiware
-    - orion-ld
-    kubeVersion: '>= 1.19'
-    maintainers:
-    - email: stefan.wiedemann@fiware.org
-      name: wistefan
-    name: orion-ld
-    sources:
-    - https://github.com/FIWARE/context.Orion-LD
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/fiware-orion-ld-1.0.2/fiware-orion-ld-1.0.2.tgz
-    version: 1.0.2
-  - annotations:
-      charts.openshift.io/digest: sha256:4fbe5370fcc2d45adf73d69320f2efb193c2946faf359b6436ac27dc06c8a359
-      charts.openshift.io/lastCertifiedTimestamp: '2022-05-05T12:16:10.065501+00:00'
-      charts.openshift.io/provider: FIWARE FOUNDATION E V
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-05-05T12:19:58.153684+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: '4.8'
-    apiVersion: v2
-    appVersion: 1.0.1
-    description: A Helm chart for running the fiware orion-ld context broker on kubernetes.
-    digest: 810e43a784a63a1cbaad8129c7772202961077528a6b1fd9fd5952dfd32dd75f
-    home: https://github.com/FIWARE/context.Orion-LD
-    icon: https://fiware.github.io/catalogue/img/fiware.png
-    keywords:
-    - fiware
-    - orion-ld
-    kubeVersion: '>= 1.19'
-    maintainers:
-    - email: stefan.wiedemann@fiware.org
-      name: wistefan
-    name: orion-ld
-    sources:
-    - https://github.com/FIWARE/context.Orion-LD
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/fiware-orion-ld-1.0.3/fiware-orion-ld-1.0.3.tgz
-    version: 1.0.3
   flomesh-console:
   - annotations:
       charts.openshift.io/digest: sha256:285ad867162027142c056417a3c303867d3f8592c59822577af08f4cdd9b56ec
@@ -344,727 +650,35 @@ entries:
     urls:
     - https://github.com/openshift-helm-charts/charts/releases/download/flomesh-fsm-0.1.8-ubi.6/flomesh-fsm-0.1.8-ubi.6.tgz
     version: 0.1.8-ubi.6
-  osm-edge:
+  gosnappass:
   - annotations:
-      charts.openshift.io/digest: sha256:d83f822d56f8c4d745edc6b95d974956c49e597a20b9ea5467e9af2228153688
-      charts.openshift.io/lastCertifiedTimestamp: '2022-12-06T16:06:40.631021+08:00'
-      charts.openshift.io/provider: Flomesh
+      charts.openshift.io/digest: sha256:cabf50dae5758ca07f0b8cfba9cfa452418318100f2faf72242b39599ed15d72
+      charts.openshift.io/lastCertifiedTimestamp: '2023-11-10T21:24:04.697112+00:00'
+      charts.openshift.io/name: gosnappass
+      charts.openshift.io/provider: Concert Hall
       charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-12-06T09:01:24.866069+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: '4.7'
-    apiVersion: v2
-    appVersion: 1.2.1-ubi8
-    dependencies:
-    - condition: contour.enabled
-      name: contour
-      repository: https://charts.bitnami.com/bitnami
-      version: 8.0.4
-    - condition: fsm.enabled
-      name: fsm
-      repository: https://charts.flomesh.io
-      version: 0.1.8-ubi.6
-    description: A Helm chart to install the osm-edge control plane on Kubernetes
-    digest: a73ed31b8162fc88dc532b20ec317a8885d2a67e1378e69c22b159c62641b90e
-    kubeVersion: '>= 1.19.0-0'
-    name: osm-edge
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/flomesh-osm-edge-1.2.1-ubi8/flomesh-osm-edge-1.2.1-ubi8.tgz
-    version: 1.2.1-ubi8
-  dsm-secrets-injector-chart:
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
-      charts.openshift.io/digest: sha256:492efc99f1c44f9a854b916859732a067bb1500795856b97f890cd1e0b672ffc
-      charts.openshift.io/lastCertifiedTimestamp: '2021-08-11T08:00:19.068501+00:00'
-      charts.openshift.io/provider: Fortanix
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-08-11T09:52:43.903021+00:00'
-    apiVersion: v2
-    appVersion: '1.0'
-    dependencies:
-    - name: fortanix-cert-setup
-      repository: file://cert-setup
-      version: '1.1'
-    digest: 75eea9fd654f060dee68bf936a7cf413e2587a0a6b685d7bc1b8421bda8ebd5e
-    kubeVersion: '>= 1.16.0 < 1.22.0'
-    maintainers:
-    - email: aman.ahuja@fortanix.com
-      name: Aman Ahuja
-    name: dsm-secrets-injector-chart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/fortanix-dsm-secrets-injector-chart-2.0/fortanix-dsm-secrets-injector-chart-2.0.tgz
-    version: '2.0'
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.6'
-      charts.openshift.io/digest: sha256:a0969bf498847f6ed19b4b35dc30a7ac4183640a105d86ac37c1c8032fb2226a
-      charts.openshift.io/lastCertifiedTimestamp: '2021-09-06T13:35:02.516167+00:00'
-      charts.openshift.io/provider: Fortanix
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-09-15T16:16:28.446206+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: 4.3 - 4.8
-    apiVersion: v2
-    appVersion: '1.0'
-    dependencies:
-    - name: fortanix-cert-setup
-      repository: file://cert-setup
-      version: '1.1'
-    digest: 8ecd9293d8bd594b26955d20e722495730648df5c95334de9bbe3dcf09a0c4d0
-    kubeVersion: '>= 1.16.0 < 1.22.0'
-    maintainers:
-    - email: aman.ahuja@fortanix.com
-      name: Aman Ahuja
-    name: dsm-secrets-injector-chart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/fortanix-dsm-secrets-injector-chart-2.2-4.6/fortanix-dsm-secrets-injector-chart-2.2-4.6.tgz
-    version: 2.2-4.6
-  samplechart:
-  - annotations:
-      charts.openshift.io/digest: sha256:7eb4836e9b39d05743a44320b4b9d057269409fa0605c6c797a960221a63e214
-      charts.openshift.io/lastCertifiedTimestamp: '2022-07-03T19:10:57.461508+00:00'
-      charts.openshift.io/provider: Fredco
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-07-03T19:12:34.976945+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
-    apiVersion: v2
-    appVersion: 1-42
-    description: A Helm chart for Kubernetes
-    digest: 6823ec50ab88b1cf6970bb1ce0ee696a5d78adec5ce8e7f6640b4d8d44944fb5
-    icon: https://www.example.com/chart-icon.png
-    kubeVersion: '>=1.20.0'
-    name: samplechart
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/fredco-samplechart-0.1.1/fredco-samplechart-0.1.1.tgz
-    version: 0.1.1
-  - annotations:
-      charts.openshift.io/digest: sha256:4abe3a57dcc5865e006b8165507a06b4f165b282a53afb3060a1ff0733c4f2dd
-      charts.openshift.io/lastCertifiedTimestamp: '2022-07-06T01:34:49.552863+00:00'
-      charts.openshift.io/provider: Fredco
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-07-06T01:36:21.837707+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
-    apiVersion: v2
-    appVersion: 1-42
-    description: A Helm chart for Kubernetes
-    digest: 83770ebbecceabdfe413e37692c89344f8e1c9951fb4be68f083834815c864f2
-    icon: https://www.example.com/chart-icon.png
-    kubeVersion: '>=1.20.0'
-    name: samplechart
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/fredco-samplechart-0.1.2/fredco-samplechart-0.1.2.tgz
-    version: 0.1.2
-  - annotations:
-      charts.openshift.io/digest: sha256:ee1cd21270b6e5d6881ae456557d4143efe3f5ddb0117c87f931489ed31a34fc
-      charts.openshift.io/lastCertifiedTimestamp: '2022-08-29T07:55:59.697791+00:00'
-      charts.openshift.io/provider: Fredco
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-08-29T07:57:22.906169+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
-    apiVersion: v2
-    appVersion: 1-42
-    description: A Helm chart for Kubernetes
-    digest: c147b2b7518d6631892477c881be12ccca5328837050da371317a4ba06177e65
-    icon: https://www.example.com/chart-icon.png
-    kubeVersion: '>=1.20.0'
-    name: samplechart
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/fredco-samplechart-0.1.3/fredco-samplechart-0.1.3.tgz
-    version: 0.1.3
-  sagent:
-  - annotations:
-      charts.openshift.io/digest: sha256:972947be3ede8321884a9079de17815ce8ca7a1805aea0bf00c1bf661be67b1b
-      charts.openshift.io/lastCertifiedTimestamp: '2022-12-06T14:51:36.962455+00:00'
-      charts.openshift.io/provider: Granulate
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-12-06T14:56:34.060536+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.8'
-    apiVersion: v2
-    description: granulate sAgent daemonset helm-chart
-    digest: 5955e7fc11e55bbf2edafd9788b773b844fb15626c5ff8ff7a30a6d9034f3a75
-    kubeVersion: '>=1.20'
-    name: sagent
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/granulate-sagent-1.0.0-latest/granulate-sagent-1.0.0-latest.tgz
-    version: 1.0.0-latest
-  vault:
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
-      charts.openshift.io/digest: sha256:ec2c09a0e5994ddb5014eea3db3c8bce41166ffa91471a06101890c6b39df36e
-      charts.openshift.io/lastCertifiedTimestamp: '2021-06-21T16:53:57.543151+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-06-21T16:54:21.970103+00:00'
-    apiVersion: v2
-    appVersion: 1.7.2
-    description: Official HashiCorp Vault Chart
-    digest: b07be2a554ecbe6a6dd48ea763ed568de317d17cf1a19fb11ddb562983286555
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.12.0/hashicorp-vault-0.12.0.tgz
-    version: 0.12.0
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
-      charts.openshift.io/digest: sha256:2e96d8f78fb494c8a5d6b9e21b677897011a55f8a005253f0e8dcf996c1d4183
-      charts.openshift.io/lastCertifiedTimestamp: '2021-06-22T22:38:14.728363+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-06-22T22:38:35.745947+00:00'
-    apiVersion: v2
-    appVersion: 1.7.3
-    description: Official HashiCorp Vault Chart
-    digest: 97e274069d9d3d028903610a3f9fca892b2620f0a334de6215ec5f962328586f
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.13.0/hashicorp-vault-0.13.0.tgz
-    version: 0.13.0
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
-      charts.openshift.io/digest: sha256:1d265a29ff69dc9765b5e19a9d10eabf038aee993ee2f506db2803814b1a6cb1
-      charts.openshift.io/lastCertifiedTimestamp: '2021-07-29T21:27:42.853986+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-07-29T21:28:20.656909+00:00'
-    apiVersion: v2
-    appVersion: 1.8.0
-    description: Official HashiCorp Vault Chart
-    digest: 02d3f8169455f4cd802acc971995bb5238d8cbaed6649bc555462fcf233f4446
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.14.0/hashicorp-vault-0.14.0.tgz
-    version: 0.14.0
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
-      charts.openshift.io/digest: sha256:935c1f1a02b5e709ef7fa299bf15d28ebc513e21f34221a548b847c88a918d88
-      charts.openshift.io/lastCertifiedTimestamp: '2021-08-23T16:53:50.420895+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-08-23T16:54:29.487621+00:00'
-    apiVersion: v2
-    appVersion: 1.8.1
-    description: Official HashiCorp Vault Chart
-    digest: 0f2f9d587ac16c1e35a512a453d2f78c337483751651c8b8934d0a7197126fc0
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.15.0/hashicorp-vault-0.15.0.tgz
-    version: 0.15.0
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
-      charts.openshift.io/digest: sha256:23af06611fd50a7dfce79b75a62ce203de815d600abd18554daa6bde45a7c303
-      charts.openshift.io/lastCertifiedTimestamp: '2021-09-16T17:56:11.189486+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-09-16T17:57:08.574025+00:00'
-    apiVersion: v2
-    appVersion: 1.8.2
-    description: Official HashiCorp Vault Chart
-    digest: 3fe196640d3ce0c15564e356f0cfea8be89ba7bec27e369055869ffde1250975
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.16.0/hashicorp-vault-0.16.0.tgz
-    version: 0.16.0
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
-      charts.openshift.io/digest: sha256:87484ad1b43f1d778432e0dfe8d329e0c04742ff8e27cc3d47551c3e9c6e0db2
-      charts.openshift.io/lastCertifiedTimestamp: '2021-09-30T01:12:12.92164+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-09-30T01:12:50.720810+00:00'
-    apiVersion: v2
-    appVersion: 1.8.3
-    description: Official HashiCorp Vault Chart
-    digest: 2916efbc0d3eec1c3015ec58e29208743eeb08d908f5a637d8fcf7e7c849af09
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.16.1/hashicorp-vault-0.16.1.tgz
-    version: 0.16.1
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
-      charts.openshift.io/digest: sha256:3a6aa1ab8cd499580b40c729fc4d7136462908fb3c9c14807a7b05be560da9a4
-      charts.openshift.io/lastCertifiedTimestamp: '2021-10-21T20:02:21.83474+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-10-21T20:02:58.180362+00:00'
-    apiVersion: v2
-    appVersion: 1.8.4
-    description: Official HashiCorp Vault Chart
-    digest: c8f9a8c8e002cedae5bff9586edb787d8331f000199195d6793950cf402e2489
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.17.0/hashicorp-vault-0.17.0.tgz
-    version: 0.17.0
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
-      charts.openshift.io/digest: sha256:341523123a13c0b8627844ef64158989dafea04444d893f1d1e7a640ae7c7afd
-      charts.openshift.io/lastCertifiedTimestamp: '2021-11-05T17:07:18.026331+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-11-05T17:07:57.442461+00:00'
-    apiVersion: v2
-    appVersion: 1.8.4
-    description: Official HashiCorp Vault Chart
-    digest: c911780a97ef484a1d847f78e0fd8b905c62a770378c386fd3a1938b5a5fa19c
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.17.1/hashicorp-vault-0.17.1.tgz
-    version: 0.17.1
-  - annotations:
-      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
-      charts.openshift.io/digest: sha256:b095c185d6764bd9b9001b252409fccc7767d8cbeeffed60cf3fbcc1227668fb
-      charts.openshift.io/lastCertifiedTimestamp: '2021-11-18T01:19:57.312218+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2021-11-18T01:20:52.063300+00:00'
-    apiVersion: v2
-    appVersion: 1.9.0
-    description: Official HashiCorp Vault Chart
-    digest: 82cdc2b639519ea668c525a711bd3bb4f865a451b632979a562eb9c052115d5f
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.18.0/hashicorp-vault-0.18.0.tgz
-    version: 0.18.0
-  - annotations:
-      charts.openshift.io/digest: sha256:177e7059cc87bd3b013a7a4c43a2c8c6c82494d42d6f1bd8b733cb69f57add0d
-      charts.openshift.io/lastCertifiedTimestamp: '2022-01-21T01:15:42.713543+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-01-21T01:16:16.375059+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.2'
-      charts.openshift.io/testedOpenShiftVersion: '4.9'
-    apiVersion: v2
-    appVersion: 1.9.2
-    description: Official HashiCorp Vault Chart
-    digest: 0bb6144c2b7e3d358f06a50b5bb0da86c83c195a5112da8f372df5de61655475
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.14.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.19.0/hashicorp-vault-0.19.0.tgz
-    version: 0.19.0
-  - annotations:
-      charts.openshift.io/digest: sha256:55a388096855f3dd48866d72a1d714332dfa9492714baf048aa89d6d22d1706e
-      charts.openshift.io/lastCertifiedTimestamp: '2022-05-17T11:57:48.425334+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-05-17T11:58:27.166946+00:00'
+      charts.openshift.io/submissionTimestamp: '2023-11-10T21:25:01.854105+00:00'
       charts.openshift.io/supportedOpenShiftVersions: '>=4.3'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
+      charts.openshift.io/testedOpenShiftVersion: '4.12'
     apiVersion: v2
-    appVersion: 1.10.3
-    description: Official HashiCorp Vault Chart
-    digest: 9c8f0a67c57f593c072708f6d90c9fbbaae8d1f601ef3a8c43c29fd5e3d99305
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    appVersion: 0.0.1
+    description: Share Passwords Securely
+    digest: 7ccc430f42dc66ed3c42d3ce111bee47cbe77aee9780c3dcdb5e7469599913a4
+    home: https://github.com/concerthall/gosnappass
+    icon: https://raw.githubusercontent.com/concerthall/gosnappass/main/assets/gosnappass.svg
     keywords:
-    - vault
-    - security
-    - encryption
     - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.16.0-0'
-    name: vault
+    - passwords
+    - snappass
+    kubeVersion: '>= 1.15.0'
+    name: gosnappass
     sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
+    - https://github.com/concerthall/gosnappass
+    - https://github.com/concerthall/gosnappass-helm
+    type: application
     urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.20.0/hashicorp-vault-0.20.0.tgz
-    version: 0.20.0
-  - annotations:
-      charts.openshift.io/digest: sha256:47dc35a653f8a8d1b1f9d30a55dba3be106542f2a233436aea986c5ff24edf3f
-      charts.openshift.io/lastCertifiedTimestamp: '2022-08-13T00:22:31.660332+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-08-13T00:23:04.218097+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.3'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
-    apiVersion: v2
-    appVersion: 1.10.3
-    description: Official HashiCorp Vault Chart
-    digest: 8d583b2a09a6db59549124742240cf19d0c3358e912cc5c1b7b00d0639d4f804
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.16.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.20.1/hashicorp-vault-0.20.1.tgz
-    version: 0.20.1
-  - annotations:
-      charts.openshift.io/digest: sha256:3a0618a1b8616b23d82ee6f7f1e17282c25ac5b57cf214c06b20331922dfa57e
-      charts.openshift.io/lastCertifiedTimestamp: '2022-08-16T00:42:33.284605+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-08-16T00:43:11.281271+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.3'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
-    apiVersion: v2
-    appVersion: 1.11.2
-    description: Official HashiCorp Vault Chart
-    digest: 9e4527f279ebc384fecffff3da28bdef757914b9404491ddacd59549d8fac9e3
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.16.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.21.0/hashicorp-vault-0.21.0.tgz
-    version: 0.21.0
-  - annotations:
-      charts.openshift.io/digest: sha256:c1538431b9bff60dff29a7dd964166695ca62ce26bedb78c30dfbe79c30a5479
-      charts.openshift.io/lastCertifiedTimestamp: '2022-09-08T21:03:34.582365+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-09-08T21:04:03.210850+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.3'
-      charts.openshift.io/testedOpenShiftVersion: '4.11'
-    apiVersion: v2
-    appVersion: 1.11.3
-    description: Official HashiCorp Vault Chart
-    digest: 040dd3812ada6f4fda8505d6d07eaf04b90e0cee4bfde0794a606cd9589ce14a
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.16.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.22.0/hashicorp-vault-0.22.0.tgz
-    version: 0.22.0
-  - annotations:
-      charts.openshift.io/digest: sha256:f81757194a41dfeb36b11fe568c091cd905daf266d09c5d86825bf567ae588b2
-      charts.openshift.io/lastCertifiedTimestamp: '2023-04-06T23:13:33.212333+00:00'
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-04-06T23:14:00.356106+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
-      charts.openshift.io/testedOpenShiftVersion: '4.11'
-    apiVersion: v2
-    appVersion: 1.13.1
-    description: Official HashiCorp Vault Chart
-    digest: 31640c5725181f85a5b892150f65c8490ef534129eb891527be6f54fdfc487d8
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.22.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.24.0/vault-0.24.0.tgz
-    version: 0.24.0
-  - annotations:
-      charts.openshift.io/digest: sha256:12fd0504d7a2d63a5b192fdc87696112b7c8d126c2c4ca116a7a1a456c385eff
-      charts.openshift.io/lastCertifiedTimestamp: '2023-09-20T02:24:40.136005+00:00'
-      charts.openshift.io/name: HashiCorp Vault
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-09-20T02:25:23.369865+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    appVersion: 1.13.1
-    description: Official HashiCorp Vault Chart
-    digest: 1b43d93c7c7ee587e6452089c7b6787ad6730058007594496c5fa84ff935fda8
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.22.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.24.1/vault-0.24.1.tgz
-    version: 0.24.1
-  - annotations:
-      charts.openshift.io/digest: sha256:096b94e1c284088ea8eea7c53347d4238ed6c849d1f36328a363603e2b67d1c6
-      charts.openshift.io/lastCertifiedTimestamp: '2023-09-20T18:44:06.242822+00:00'
-      charts.openshift.io/name: HashiCorp Vault
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-09-20T18:44:41.679506+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    appVersion: 1.14.0
-    description: Official HashiCorp Vault Chart
-    digest: c4d8626eed7b73f7a7f23d78ba754fde5686ed4e2843410f2fa9f0a1b6c3aa7c
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.20.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.25.0/vault-0.25.0.tgz
-    version: 0.25.0
-  - annotations:
-      charts.openshift.io/digest: sha256:d7d15c29a6328806f0e12f073ba8d672101aa7598efde5af0eda34e5e584bb04
-      charts.openshift.io/lastCertifiedTimestamp: '2023-10-31T16:33:41.221244+00:00'
-      charts.openshift.io/name: HashiCorp Vault
-      charts.openshift.io/provider: HashiCorp
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-10-31T16:34:53.589939+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    appVersion: 1.15.1
-    description: Official HashiCorp Vault Chart
-    digest: c94227a1eb922fb33916fd8818ddca544b0d6efb5199fb18d5c486ce1e556a1c
-    home: https://www.vaultproject.io
-    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
-    keywords:
-    - vault
-    - security
-    - encryption
-    - secrets
-    - management
-    - automation
-    - infrastructure
-    kubeVersion: '>= 1.20.0-0'
-    name: vault
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/hashicorp/vault-helm
-    - https://github.com/hashicorp/vault-k8s
-    - https://github.com/hashicorp/vault-csi-provider
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.26.1/vault-0.26.1.tgz
-    version: 0.26.1
+    - https://github.com/komish/openshift-helm-charts/releases/download/concerthall-gosnappass-0.0.1/gosnappass-0.0.1.tgz
+    version: 0.0.1
   i2i5gcorehelm:
   - annotations:
       charts.openshift.io/digest: sha256:e189b295ee18215a63d967e51320316c819a9e59cc0541df4a0eddb917034000
@@ -1085,73 +699,6 @@ entries:
     urls:
     - https://github.com/openshift-helm-charts/charts/releases/download/i2i-i2i5gcorehelm-1.0.0/i2i5gcorehelm-1.0.0.tgz
     version: 1.0.0
-  nodered-chart:
-  - annotations:
-      charts.openshift.io/archs: x86_64
-      charts.openshift.io/digest: sha256:b652b9b97a00c12c2998c690d54b2b974a84093dd3b21d1dfe35fb72eca4c583
-      charts.openshift.io/lastCertifiedTimestamp: '2022-01-11T11:53:30.78766+00:00'
-      charts.openshift.io/name: Node Red Chart
-      charts.openshift.io/provider: IBM-Edge
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-01-11T15:04:50.631921+00:00'
-      charts.openshift.io/supportURL: https://github.com/rhm-samples/node-red-operator/issues
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.5'
-      charts.openshift.io/testedOpenShiftVersion: '4.7'
-    apiVersion: v2
-    appVersion: 1.16.0
-    description: A Helm chart for NodeRed.
-    digest: 8bc2576c5c07648ea377e68cbc5151e3c7799d1563256ebe571772e86e3e3746
-    icon: https://raw.githubusercontent.com/rhm-samples/node-red-operator/node-red-logo/_images/nodered-logo.png
-    kubeVersion: '>=1.18.0'
-    name: nodered-chart
-    type: application
-    urls:
-    - https://github.com/rhm-samples/edge-helm-charts/blob/master/nodered-chart-0.0.1.tgz?raw=true
-    version: 0.0.1
-  - annotations:
-      charts.openshift.io/archs: x86_64
-      charts.openshift.io/digest: sha256:c37f3a107d1de21e42f59438fbb7418c3dcc16b9c9145b919a5b2b093d473f7f
-      charts.openshift.io/lastCertifiedTimestamp: '2022-01-12T07:08:08.731538+00:00'
-      charts.openshift.io/name: Node Red Chart
-      charts.openshift.io/provider: IBM-Edge
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-01-12T12:48:19.319224+00:00'
-      charts.openshift.io/supportURL: https://github.com/rhm-samples/node-red-operator/issues
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.5'
-      charts.openshift.io/testedOpenShiftVersion: '4.8'
-    apiVersion: v2
-    appVersion: 1.16.0
-    description: A Helm chart for NodeRed.
-    digest: 8289ac839da0ed0f3eee76c4543c9a3612d74bd58193bb87bd761f98915fafea
-    icon: https://raw.githubusercontent.com/rhm-samples/node-red-operator/node-red-logo/_images/nodered-logo.png
-    kubeVersion: '>=1.18.0'
-    name: nodered-chart
-    type: application
-    urls:
-    - https://github.com/rhm-samples/edge-helm-charts/blob/master/nodered-chart-0.0.2.tgz
-    version: 0.0.2
-  - annotations:
-      charts.openshift.io/archs: x86_64
-      charts.openshift.io/digest: sha256:46714455003028a6026b8f12f7bd4dbef30f06a38a79a58f3576fa5a13fa087b
-      charts.openshift.io/lastCertifiedTimestamp: '2022-01-14T13:27:34.56394+00:00'
-      charts.openshift.io/name: Node Red Chart
-      charts.openshift.io/provider: IBM-Edge
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-01-14T13:50:21.378513+00:00'
-      charts.openshift.io/supportURL: https://github.com/rhm-samples/node-red-operator/issues
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.5'
-      charts.openshift.io/testedOpenShiftVersion: '4.8'
-    apiVersion: v2
-    appVersion: 1.16.0
-    description: A Helm chart for NodeRed.
-    digest: f29558295f24ea49f87523a230b67b941180ba95775e6ea4533bcd8c2b5b40c5
-    icon: https://raw.githubusercontent.com/rhm-samples/node-red-operator/node-red-logo/_images/nodered-logo.png
-    kubeVersion: '>=1.18.0'
-    name: nodered-chart
-    type: application
-    urls:
-    - https://github.com/rhm-samples/edge-helm-charts/blob/master/nodered-chart-0.0.3.tgz?raw=true
-    version: 0.0.3
   ibm-object-storage-plugin:
   - annotations:
       charts.openshift.io/certifiedOpenShiftVersions: 4.7.0
@@ -2809,280 +2356,6 @@ entries:
     urls:
     - https://github.com/openshift-helm-charts/charts/releases/download/infinispan-infinispan-0.3.2/infinispan-0.3.2.tgz
     version: 0.3.2
-  nfvri:
-  - annotations:
-      charts.openshift.io/digest: sha256:590d7a20414c751498c355163f48bf312481726fc617f9a034bbcd682e802477
-      charts.openshift.io/lastCertifiedTimestamp: '2022-04-20T10:33:50.894848+00:00'
-      charts.openshift.io/name: nfvri
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-04-20T10:51:38.139164+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
-    apiVersion: v2
-    appVersion: 4.3.0
-    dependencies:
-    - name: nfvri-agent
-      repository: file://../nfvri-agent
-      version: 4.3.0
-    - name: nfvri-apiserver
-      repository: file://../nfvri-apiserver
-      version: 4.3.0
-    - name: nfvri-orchestrator
-      repository: file://../nfvri-orchestrator
-      version: 4.3.0
-    - name: nfvri-dashboard
-      repository: file://../nfvri-dashboard
-      version: 4.3.0
-    description: A Helm chart for Kubernetes to deploy the NFV-RI stack
-    digest: 311b83691f68272f4cc09a13c547b67052457d02775b2455687c1b59f660b3b9
-    kubeVersion: '>= 1.20.0'
-    name: nfvri
-    type: application
-    urls:
-    - https://europe-docker.pkg.dev/nfv-ri/rh-helm-charts/nfvri
-    version: 4.3.0
-  backstage:
-  - annotations:
-      charts.openshift.io/digest: sha256:8b39a5f3ea491cf8d3623a24b73d811324a33620672bef4ee7ebaf358d7b187c
-      charts.openshift.io/lastCertifiedTimestamp: '2023-05-25T14:03:05.890056+00:00'
-      charts.openshift.io/provider: Janus IDP
-      charts.openshift.io/providerType: community
-      charts.openshift.io/submissionTimestamp: '2023-05-25T14:03:34.222995+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: N/A
-    apiVersion: v2
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    - alias: upstream
-      name: backstage
-      repository: https://backstage.github.io/charts
-      version: 1.x.x
-    description: A Helm chart for deploying a Backstage application
-    digest: 7ab617d81acc65640d1afc39130a89261d806f9c33040906c6e2c22b7454dd09
-    home: https://janus-idp.io
-    icon: https://avatars.githubusercontent.com/u/117844786
-    keywords:
-    - backstage
-    - idp
-    - janus-idp
-    kubeVersion: '>= 1.19.0-0'
-    maintainers:
-    - name: Janus-IDP
-      url: https://janus-idp.io
-    name: backstage
-    sources:
-    - https://github.com/janus-idp/helm-backstage
-    - https://github.com/janus-idp/backstage-showcase
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.0.1/backstage-2.0.1.tgz
-    version: 2.0.1
-  - annotations:
-      charts.openshift.io/digest: sha256:e9bc77a98396c21e091ade7ee279eda32da8da0efcea091e4a93c1f6438ea769
-      charts.openshift.io/lastCertifiedTimestamp: '2023-06-08T21:28:23.357174+00:00'
-      charts.openshift.io/provider: Janus IDP
-      charts.openshift.io/providerType: community
-      charts.openshift.io/submissionTimestamp: '2023-06-08T21:29:20.843722+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: '4.12'
-    apiVersion: v2
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    - alias: upstream
-      name: backstage
-      repository: https://backstage.github.io/charts
-      version: 1.x.x
-    description: A Helm chart for deploying a Backstage application
-    digest: 2347b9b59ff56167eb412ad5b13c48f0ad9cb4d8f4534df4acea8c82892dcb1c
-    home: https://janus-idp.io
-    icon: https://avatars.githubusercontent.com/u/117844786
-    keywords:
-    - backstage
-    - idp
-    - janus-idp
-    kubeVersion: '>= 1.19.0-0'
-    maintainers:
-    - name: Janus-IDP
-      url: https://janus-idp.io
-    name: backstage
-    sources:
-    - https://github.com/janus-idp/helm-backstage
-    - https://github.com/janus-idp/backstage-showcase
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.0.2/backstage-2.0.2.tgz
-    version: 2.0.2
-  - annotations:
-      charts.openshift.io/digest: sha256:b23bd3b7ce11d43df24dc12903e6c90f1f23e281ed9fa5b74b15f0333119293e
-      charts.openshift.io/lastCertifiedTimestamp: '2023-06-16T18:28:30.876466+00:00'
-      charts.openshift.io/provider: Janus IDP
-      charts.openshift.io/providerType: community
-      charts.openshift.io/submissionTimestamp: '2023-06-16T18:29:30.665171+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: '4.12'
-    apiVersion: v2
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    - alias: upstream
-      name: backstage
-      repository: https://backstage.github.io/charts
-      version: 1.x.x
-    description: A Helm chart for deploying a Backstage application
-    digest: d9a743c71893654424a1e84e564e630ae56d70dbdb0d412a81b87ea2989d61c0
-    home: https://janus-idp.io
-    icon: https://avatars.githubusercontent.com/u/117844786
-    keywords:
-    - backstage
-    - idp
-    - janus-idp
-    kubeVersion: '>= 1.19.0-0'
-    maintainers:
-    - name: Janus-IDP
-      url: https://janus-idp.io
-    name: backstage
-    sources:
-    - https://github.com/janus-idp/helm-backstage
-    - https://github.com/janus-idp/backstage-showcase
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.0.3/backstage-2.0.3.tgz
-    version: 2.0.3
-  - annotations:
-      charts.openshift.io/digest: sha256:836e867c833c12a1263bb6538af1eb060e5f2680e33abb3745329a2a81c75dc6
-      charts.openshift.io/lastCertifiedTimestamp: '2023-06-20T19:32:57.603527+00:00'
-      charts.openshift.io/provider: Janus IDP
-      charts.openshift.io/providerType: community
-      charts.openshift.io/submissionTimestamp: '2023-06-20T19:33:51.182317+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: '4.12'
-    apiVersion: v2
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    - alias: upstream
-      name: backstage
-      repository: https://backstage.github.io/charts
-      version: 1.x.x
-    description: A Helm chart for deploying a Backstage application
-    digest: 27f533268c740995656825752b3b651c69bdcd4befc3a42d82f4bb51a915e6e1
-    home: https://janus-idp.io
-    icon: https://avatars.githubusercontent.com/u/117844786
-    keywords:
-    - backstage
-    - idp
-    - janus-idp
-    kubeVersion: '>= 1.19.0-0'
-    maintainers:
-    - name: Janus-IDP
-      url: https://janus-idp.io
-    name: backstage
-    sources:
-    - https://github.com/janus-idp/helm-backstage
-    - https://github.com/janus-idp/backstage-showcase
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.1.0/backstage-2.1.0.tgz
-    version: 2.1.0
-  - annotations:
-      charts.openshift.io/digest: sha256:b71f43f61735d8e591e0d50f668e3ed2c6eabc12f8c88e0086e06396722cd225
-      charts.openshift.io/lastCertifiedTimestamp: '2023-06-26T14:51:06.360068+00:00'
-      charts.openshift.io/provider: Janus IDP
-      charts.openshift.io/providerType: community
-      charts.openshift.io/submissionTimestamp: '2023-06-26T14:52:01.486969+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: '4.12'
-    apiVersion: v2
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      tags:
-      - bitnami-common
-      version: 2.4.0
-    - alias: upstream
-      name: backstage
-      repository: https://backstage.github.io/charts
-      version: 1.1.2
-    description: A Helm chart for deploying a Backstage application
-    digest: 586bd79b405f49a5f574d2f6e843a7a3d821e2270d417eae1d6b99327c22d230
-    home: https://janus-idp.io
-    icon: https://avatars.githubusercontent.com/u/117844786
-    keywords:
-    - backstage
-    - idp
-    - janus-idp
-    kubeVersion: '>= 1.19.0-0'
-    maintainers:
-    - name: Janus-IDP
-      url: https://janus-idp.io
-    name: backstage
-    sources:
-    - https://github.com/janus-idp/helm-backstage
-    - https://github.com/janus-idp/backstage-showcase
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.2.0/backstage-2.2.0.tgz
-    version: 2.2.0
-  - annotations:
-      artifacthub.io/category: integration-delivery
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: "- name: support\n  url: https://github.com/janus-idp/helm-backstage/issues\n-
-        name: Chart Source\n  url: https://github.com/janus-idp/helm-backstage\n-
-        name: Default Image Source\n  url: https://github.com/janus-idp/backstage-showcase\n"
-      charts.openshift.io/digest: sha256:f5b307e53262859f8a396ce565b02272ec508b04935a584752a496a14e26b128
-      charts.openshift.io/lastCertifiedTimestamp: '2023-09-12T17:06:14.873334+00:00'
-      charts.openshift.io/name: Backstage
-      charts.openshift.io/provider: Janus IDP
-      charts.openshift.io/providerType: community
-      charts.openshift.io/submissionTimestamp: '2023-09-12T17:06:57.487922+00:00'
-      charts.openshift.io/supportURL: https://github.com/janus-idp/helm-backstage/issues
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
-      charts.openshift.io/testedOpenShiftVersion: N/A
-    apiVersion: v2
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      tags:
-      - bitnami-common
-      version: 2.9.1
-    - alias: upstream
-      name: backstage
-      repository: https://backstage.github.io/charts
-      version: 1.2.0
-    description: A Helm chart for deploying a Backstage application
-    digest: 129bbb648270f51edfbdad4cc1546547ffabd0381f2fa4d09130a2ee01cea582
-    home: https://janus-idp.io
-    icon: https://avatars.githubusercontent.com/u/117844786
-    keywords:
-    - backstage
-    - idp
-    - janus-idp
-    kubeVersion: '>= 1.19.0-0'
-    maintainers:
-    - name: Janus-IDP
-      url: https://janus-idp.io
-    name: backstage
-    sources:
-    - https://github.com/janus-idp/helm-backstage
-    - https://github.com/janus-idp/backstage-showcase
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/janus-idp-backstage-2.4.0/backstage-2.4.0.tgz
-    version: 2.4.0
   kovairdevops-helm:
   - annotations:
       charts.openshift.io/digest: sha256:a4c8cc79dbc78fd8d10779d3e7e80518cacde3e4730e00207829d51cfc77b0f4
@@ -3105,174 +2378,6 @@ entries:
     urls:
     - https://github.com/openshift-helm-charts/charts/releases/download/kovair-kovairdevops-helm-0.1.0/kovair-kovairdevops-helm-0.1.0.tgz
     version: 0.1.0
-  lacework-agent:
-  - annotations:
-      charts.openshift.io/digest: sha256:fdc6f7c21a4f42349848a970de8a1d4a548c58e3f1366b0d3f84705a3b979a31
-      charts.openshift.io/lastCertifiedTimestamp: '2022-03-15T17:49:54.212404+00:00'
-      charts.openshift.io/provider: Lacework
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-03-22T18:25:03.951306+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.9'
-    apiVersion: v2
-    appVersion: '1.0'
-    description: Lacework Agent
-    digest: 60a977f3f65094912be2819b8952bc0d4ec1e1eb566b796e265ad327069b08ad
-    home: https://www.lacework.com
-    icon: https://www.lacework.com/wp-content/uploads/2019/07/Lacework_Logo_color_2019.svg
-    keywords:
-    - monitoring
-    - security
-    - run-time
-    - metric
-    - troubleshooting
-    kubeVersion: '> 1.9.0'
-    maintainers:
-    - email: info@lacework.net
-      name: lacework-support
-    name: lacework-agent
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/lacework-lacework-agent-5.4.1/lacework-lacework-agent-5.4.1.tgz
-    version: 5.4.1
-  bpjstk-service:
-  - annotations:
-      charts.openshift.io/digest: sha256:59170c18b61fac0926d8d12f70914502b282b9fd66b1ab062ab99aabbae7974c
-      charts.openshift.io/lastCertifiedTimestamp: '2023-06-11T12:51:20.439212+07:00'
-      charts.openshift.io/provider: PT. Multipolar Tbk
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-06-11T05:54:24.738943+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
-      charts.openshift.io/testedOpenShiftVersion: '4.12'
-    apiVersion: v2
-    appVersion: 1.0.0
-    description: BPJSTK Multichannel Payment Gateway
-    digest: 0d3f151c28fa81ccd206896da8e6ae29d561c6bc27f0201ef69daec7d859a668
-    kubeVersion: '>=1.20.0'
-    name: bpjstk-service
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/multipolar-bpjstk-service-1.0.0/bpjstk-service-1.0.0.tgz
-    version: 1.0.0
-  nef-nabstract:
-  - annotations:
-      charts.openshift.io/digest: sha256:f17a0108bde61a2e532b1a4dc9f1608acfd1450267d7828bc2b9e872e6e6803f
-      charts.openshift.io/lastCertifiedTimestamp: '2023-06-11T20:02:27.729265+00:00'
-      charts.openshift.io/provider: Nabstract Technologies Pvt. Ltd.
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-06-11T20:08:27.377546+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.12'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    appVersion: 2.5.7
-    description: NABSTRACT NEF deployment Helm chart
-    digest: 2844b47efc233871585fb45b77ec255351b9220a3d0581e7c0f43d506af77e9a
-    kubeVersion: '>= 1.25.0'
-    name: nef-nabstract
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/nabstract-nef-nabstract-1.1.0/nef-nabstract-1.1.0.tgz
-    version: 1.1.0
-  - annotations:
-      catalog.cattle.io/certified: partner
-      catalog.cattle.io/display-name: NEF
-      catalog.cattle.io/release-name: nef-nabstract
-      charts.openshift.io/digest: sha256:ed143d98e9dfb876a512ee7cb485c871306872755ea8e2e14c2b7ed3cea73709
-      charts.openshift.io/lastCertifiedTimestamp: '2023-09-11T12:59:56.214977+00:00'
-      charts.openshift.io/name: nef-nabstract
-      charts.openshift.io/provider: Nabstract Technologies Pvt. Ltd.
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-09-11T20:20:58.330352+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.12'
-      charts.openshift.io/testedOpenShiftVersion: '4.12'
-    apiVersion: v2
-    appVersion: 2.5.7
-    description: NABSTRACT NEF deployment Helm chart
-    digest: 493da0bdb2b167b6e81359104e1af1afde93e27b12171c715adb989765582288
-    kubeVersion: '>= 1.25.0'
-    name: nef-nabstract
-    type: application
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/nabstract-nef-nabstract-2.0.0/nef-nabstract-2.0.0.tgz
-    version: 2.0.0
-  nearbyone-controller:
-  - annotations:
-      charts.openshift.io/digest: sha256:1cdd24c3ff3be63e1816b59962a027d03317c44776f55dfe6ef1b9277b896dcb
-      charts.openshift.io/lastCertifiedTimestamp: '2023-04-27T16:16:08.079605+00:00'
-      charts.openshift.io/name: NearbyOne Controller
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-04-27T16:20:22.469037+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
-      charts.openshift.io/testedOpenShiftVersion: '4.11'
-    apiVersion: v2
-    appVersion: 1.16.0
-    dependencies:
-    - alias: hydra
-      condition: hydra.enabled
-      name: hydra-maesterless
-      repository: https://registry.nearbycomputing.com/chartrepo/public
-      version: ~0.30.1
-    - alias: hydraDB
-      condition: hydraDB.enabled
-      name: postgresql
-      repository: https://registry.nearbycomputing.com/chartrepo/public
-      version: ~10.16.2
-    - condition: keto.enabled
-      name: keto
-      repository: https://registry.nearbycomputing.com/chartrepo/public
-      version: ~0.27.0
-    - alias: ketoDB
-      condition: ketoDB.enabled
-      name: postgresql
-      repository: https://registry.nearbycomputing.com/chartrepo/public
-      version: ~10.16.2
-    - condition: kratos.enabled
-      name: kratos
-      repository: https://registry.nearbycomputing.com/chartrepo/public
-      version: ~0.27.0
-    - alias: kratosDB
-      condition: kratosDB.enabled
-      name: postgresql
-      repository: https://registry.nearbycomputing.com/chartrepo/public
-      version: ~10.16.2
-    - alias: oathkeeper
-      condition: oathkeeper.enabled
-      name: oathkeeper-maesterless
-      repository: https://registry.nearbycomputing.com/chartrepo/public
-      version: ~0.30.0
-    - condition: metallb.enabled
-      name: metallb
-      repository: https://metallb.github.io/metallb
-      version: ~0.11.0
-    - condition: ingress-nginx.enabled
-      name: ingress-nginx
-      repository: https://kubernetes.github.io/ingress-nginx
-      version: 4.2.5
-    - condition: prometheus.enabled
-      name: prometheus
-      repository: https://prometheus-community.github.io/helm-charts
-      version: ~15.0.1
-    - condition: fluentd.enabled
-      name: fluentd
-      repository: https://fluent.github.io/helm-charts
-      version: ~0.3.7
-    - condition: fluent-bit.enabled
-      name: fluent-bit
-      repository: https://fluent.github.io/helm-charts
-      version: ~0.24.0
-    - alias: externaldns
-      condition: externaldns.enabled
-      name: external-dns
-      repository: https://charts.bitnami.com/bitnami
-      version: ~6.5.5
-    description: A Helm chart for Kubernetes
-    digest: 25082acedb8eb2914aa78def6d9811a3018fab73377ddcc7f1e0b01484bae431
-    icon: https://blocklogos.s3.eu-west-1.amazonaws.com/nearbycomputing.png
-    kubeVersion: '>=1.22'
-    name: nearbyone-controller
-    type: application
-    urls:
-    - https://registry.nearbycomputing.com/chartrepo/redhat/charts/nearbyone-controller-2.119.1.tgz
-    version: 2.119.1
   kyverno:
   - annotations:
       charts.openshift.io/digest: sha256:e2146be6e64f8581d77e026ffda519e03e9ce5e91cae86609cd4e723961856c1
@@ -3366,6 +2471,254 @@ entries:
     urls:
     - https://github.com/openshift-helm-charts/charts/releases/download/nirmata-kyverno-2.6.5/kyverno-2.6.5.tgz
     version: 2.6.5
+  lacework-agent:
+  - annotations:
+      charts.openshift.io/digest: sha256:fdc6f7c21a4f42349848a970de8a1d4a548c58e3f1366b0d3f84705a3b979a31
+      charts.openshift.io/lastCertifiedTimestamp: '2022-03-15T17:49:54.212404+00:00'
+      charts.openshift.io/provider: Lacework
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-03-22T18:25:03.951306+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.9'
+    apiVersion: v2
+    appVersion: '1.0'
+    description: Lacework Agent
+    digest: 60a977f3f65094912be2819b8952bc0d4ec1e1eb566b796e265ad327069b08ad
+    home: https://www.lacework.com
+    icon: https://www.lacework.com/wp-content/uploads/2019/07/Lacework_Logo_color_2019.svg
+    keywords:
+    - monitoring
+    - security
+    - run-time
+    - metric
+    - troubleshooting
+    kubeVersion: '> 1.9.0'
+    maintainers:
+    - email: info@lacework.net
+      name: lacework-support
+    name: lacework-agent
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/lacework-lacework-agent-5.4.1/lacework-lacework-agent-5.4.1.tgz
+    version: 5.4.1
+  nearbyone-controller:
+  - annotations:
+      charts.openshift.io/digest: sha256:1cdd24c3ff3be63e1816b59962a027d03317c44776f55dfe6ef1b9277b896dcb
+      charts.openshift.io/lastCertifiedTimestamp: '2023-04-27T16:16:08.079605+00:00'
+      charts.openshift.io/name: NearbyOne Controller
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-04-27T16:20:22.469037+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
+      charts.openshift.io/testedOpenShiftVersion: '4.11'
+    apiVersion: v2
+    appVersion: 1.16.0
+    dependencies:
+    - alias: hydra
+      condition: hydra.enabled
+      name: hydra-maesterless
+      repository: https://registry.nearbycomputing.com/chartrepo/public
+      version: ~0.30.1
+    - alias: hydraDB
+      condition: hydraDB.enabled
+      name: postgresql
+      repository: https://registry.nearbycomputing.com/chartrepo/public
+      version: ~10.16.2
+    - condition: keto.enabled
+      name: keto
+      repository: https://registry.nearbycomputing.com/chartrepo/public
+      version: ~0.27.0
+    - alias: ketoDB
+      condition: ketoDB.enabled
+      name: postgresql
+      repository: https://registry.nearbycomputing.com/chartrepo/public
+      version: ~10.16.2
+    - condition: kratos.enabled
+      name: kratos
+      repository: https://registry.nearbycomputing.com/chartrepo/public
+      version: ~0.27.0
+    - alias: kratosDB
+      condition: kratosDB.enabled
+      name: postgresql
+      repository: https://registry.nearbycomputing.com/chartrepo/public
+      version: ~10.16.2
+    - alias: oathkeeper
+      condition: oathkeeper.enabled
+      name: oathkeeper-maesterless
+      repository: https://registry.nearbycomputing.com/chartrepo/public
+      version: ~0.30.0
+    - condition: metallb.enabled
+      name: metallb
+      repository: https://metallb.github.io/metallb
+      version: ~0.11.0
+    - condition: ingress-nginx.enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.2.5
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: ~15.0.1
+    - condition: fluentd.enabled
+      name: fluentd
+      repository: https://fluent.github.io/helm-charts
+      version: ~0.3.7
+    - condition: fluent-bit.enabled
+      name: fluent-bit
+      repository: https://fluent.github.io/helm-charts
+      version: ~0.24.0
+    - alias: externaldns
+      condition: externaldns.enabled
+      name: external-dns
+      repository: https://charts.bitnami.com/bitnami
+      version: ~6.5.5
+    description: A Helm chart for Kubernetes
+    digest: 25082acedb8eb2914aa78def6d9811a3018fab73377ddcc7f1e0b01484bae431
+    icon: https://blocklogos.s3.eu-west-1.amazonaws.com/nearbycomputing.png
+    kubeVersion: '>=1.22'
+    name: nearbyone-controller
+    type: application
+    urls:
+    - https://registry.nearbycomputing.com/chartrepo/redhat/charts/nearbyone-controller-2.119.1.tgz
+    version: 2.119.1
+  nef-nabstract:
+  - annotations:
+      charts.openshift.io/digest: sha256:f17a0108bde61a2e532b1a4dc9f1608acfd1450267d7828bc2b9e872e6e6803f
+      charts.openshift.io/lastCertifiedTimestamp: '2023-06-11T20:02:27.729265+00:00'
+      charts.openshift.io/provider: Nabstract Technologies Pvt. Ltd.
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-06-11T20:08:27.377546+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.12'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    appVersion: 2.5.7
+    description: NABSTRACT NEF deployment Helm chart
+    digest: 2844b47efc233871585fb45b77ec255351b9220a3d0581e7c0f43d506af77e9a
+    kubeVersion: '>= 1.25.0'
+    name: nef-nabstract
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/nabstract-nef-nabstract-1.1.0/nef-nabstract-1.1.0.tgz
+    version: 1.1.0
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: NEF
+      catalog.cattle.io/release-name: nef-nabstract
+      charts.openshift.io/digest: sha256:ed143d98e9dfb876a512ee7cb485c871306872755ea8e2e14c2b7ed3cea73709
+      charts.openshift.io/lastCertifiedTimestamp: '2023-09-11T12:59:56.214977+00:00'
+      charts.openshift.io/name: nef-nabstract
+      charts.openshift.io/provider: Nabstract Technologies Pvt. Ltd.
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-09-11T20:20:58.330352+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.12'
+      charts.openshift.io/testedOpenShiftVersion: '4.12'
+    apiVersion: v2
+    appVersion: 2.5.7
+    description: NABSTRACT NEF deployment Helm chart
+    digest: 493da0bdb2b167b6e81359104e1af1afde93e27b12171c715adb989765582288
+    kubeVersion: '>= 1.25.0'
+    name: nef-nabstract
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/nabstract-nef-nabstract-2.0.0/nef-nabstract-2.0.0.tgz
+    version: 2.0.0
+  nfvri:
+  - annotations:
+      charts.openshift.io/digest: sha256:590d7a20414c751498c355163f48bf312481726fc617f9a034bbcd682e802477
+      charts.openshift.io/lastCertifiedTimestamp: '2022-04-20T10:33:50.894848+00:00'
+      charts.openshift.io/name: nfvri
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-04-20T10:51:38.139164+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    appVersion: 4.3.0
+    dependencies:
+    - name: nfvri-agent
+      repository: file://../nfvri-agent
+      version: 4.3.0
+    - name: nfvri-apiserver
+      repository: file://../nfvri-apiserver
+      version: 4.3.0
+    - name: nfvri-orchestrator
+      repository: file://../nfvri-orchestrator
+      version: 4.3.0
+    - name: nfvri-dashboard
+      repository: file://../nfvri-dashboard
+      version: 4.3.0
+    description: A Helm chart for Kubernetes to deploy the NFV-RI stack
+    digest: 311b83691f68272f4cc09a13c547b67052457d02775b2455687c1b59f660b3b9
+    kubeVersion: '>= 1.20.0'
+    name: nfvri
+    type: application
+    urls:
+    - https://europe-docker.pkg.dev/nfv-ri/rh-helm-charts/nfvri
+    version: 4.3.0
+  nodered-chart:
+  - annotations:
+      charts.openshift.io/archs: x86_64
+      charts.openshift.io/digest: sha256:b652b9b97a00c12c2998c690d54b2b974a84093dd3b21d1dfe35fb72eca4c583
+      charts.openshift.io/lastCertifiedTimestamp: '2022-01-11T11:53:30.78766+00:00'
+      charts.openshift.io/name: Node Red Chart
+      charts.openshift.io/provider: IBM-Edge
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-01-11T15:04:50.631921+00:00'
+      charts.openshift.io/supportURL: https://github.com/rhm-samples/node-red-operator/issues
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.5'
+      charts.openshift.io/testedOpenShiftVersion: '4.7'
+    apiVersion: v2
+    appVersion: 1.16.0
+    description: A Helm chart for NodeRed.
+    digest: 8bc2576c5c07648ea377e68cbc5151e3c7799d1563256ebe571772e86e3e3746
+    icon: https://raw.githubusercontent.com/rhm-samples/node-red-operator/node-red-logo/_images/nodered-logo.png
+    kubeVersion: '>=1.18.0'
+    name: nodered-chart
+    type: application
+    urls:
+    - https://github.com/rhm-samples/edge-helm-charts/blob/master/nodered-chart-0.0.1.tgz?raw=true
+    version: 0.0.1
+  - annotations:
+      charts.openshift.io/archs: x86_64
+      charts.openshift.io/digest: sha256:c37f3a107d1de21e42f59438fbb7418c3dcc16b9c9145b919a5b2b093d473f7f
+      charts.openshift.io/lastCertifiedTimestamp: '2022-01-12T07:08:08.731538+00:00'
+      charts.openshift.io/name: Node Red Chart
+      charts.openshift.io/provider: IBM-Edge
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-01-12T12:48:19.319224+00:00'
+      charts.openshift.io/supportURL: https://github.com/rhm-samples/node-red-operator/issues
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.5'
+      charts.openshift.io/testedOpenShiftVersion: '4.8'
+    apiVersion: v2
+    appVersion: 1.16.0
+    description: A Helm chart for NodeRed.
+    digest: 8289ac839da0ed0f3eee76c4543c9a3612d74bd58193bb87bd761f98915fafea
+    icon: https://raw.githubusercontent.com/rhm-samples/node-red-operator/node-red-logo/_images/nodered-logo.png
+    kubeVersion: '>=1.18.0'
+    name: nodered-chart
+    type: application
+    urls:
+    - https://github.com/rhm-samples/edge-helm-charts/blob/master/nodered-chart-0.0.2.tgz
+    version: 0.0.2
+  - annotations:
+      charts.openshift.io/archs: x86_64
+      charts.openshift.io/digest: sha256:46714455003028a6026b8f12f7bd4dbef30f06a38a79a58f3576fa5a13fa087b
+      charts.openshift.io/lastCertifiedTimestamp: '2022-01-14T13:27:34.56394+00:00'
+      charts.openshift.io/name: Node Red Chart
+      charts.openshift.io/provider: IBM-Edge
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-01-14T13:50:21.378513+00:00'
+      charts.openshift.io/supportURL: https://github.com/rhm-samples/node-red-operator/issues
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.5'
+      charts.openshift.io/testedOpenShiftVersion: '4.8'
+    apiVersion: v2
+    appVersion: 1.16.0
+    description: A Helm chart for NodeRed.
+    digest: f29558295f24ea49f87523a230b67b941180ba95775e6ea4533bcd8c2b5b40c5
+    icon: https://raw.githubusercontent.com/rhm-samples/node-red-operator/node-red-logo/_images/nodered-logo.png
+    kubeVersion: '>=1.18.0'
+    name: nodered-chart
+    type: application
+    urls:
+    - https://github.com/rhm-samples/edge-helm-charts/blob/master/nodered-chart-0.0.3.tgz?raw=true
+    version: 0.0.3
   opscruise:
   - annotations:
       charts.openshift.io/digest: sha256:3936a9deac923380aa2dd842f19da07d32030a867ebd05eea48dd38b895b82c0
@@ -3542,6 +2895,593 @@ entries:
     urls:
     - https://opscruise-helm.bitbucket.io/opscruise-0.35.100.tgz.gzip
     version: 0.35.100
+  orion-ld:
+  - annotations:
+      charts.openshift.io/digest: sha256:7e67553ee7d697bed1b7d40a9d1c3ed1d724e32c7894c43629b5c156718aa3dd
+      charts.openshift.io/lastCertifiedTimestamp: '2022-01-19T16:19:54.899727+00:00'
+      charts.openshift.io/provider: FIWARE FOUNDATION E V
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-01-19T16:26:11.553809+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: '4.6'
+    apiVersion: v2
+    appVersion: 1.0.1
+    description: A Helm chart for running the fiware orion-ld context broker on kubernetes.
+    digest: 1d0303e3045755f86f9065eb4d901fa7364696ddd7e0d164fb3b165ddb3fa0a1
+    home: https://github.com/FIWARE/context.Orion-LD
+    icon: https://fiware.github.io/catalogue/img/fiware.png
+    keywords:
+    - fiware
+    - orion-ld
+    kubeVersion: '>= 1.19'
+    maintainers:
+    - email: stefan.wiedemann@fiware.org
+      name: wistefan
+    name: orion-ld
+    sources:
+    - https://github.com/FIWARE/context.Orion-LD
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/fiware-orion-ld-1.0.1/fiware-orion-ld-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      charts.openshift.io/digest: sha256:0d92b66be3aa627001ab8c9e86c3c9eeb8f1d1da2c722576e72e2f446c11ca6c
+      charts.openshift.io/lastCertifiedTimestamp: '2022-02-22T14:56:04.991993+00:00'
+      charts.openshift.io/provider: FIWARE FOUNDATION E V
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-02-22T15:00:08.424853+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: '4.6'
+    apiVersion: v2
+    appVersion: 1.0.1
+    description: A Helm chart for running the fiware orion-ld context broker on kubernetes.
+    digest: b01f25461d6279499d75498232db215cd8c27d848cf653f6b1ba32551f2e3df6
+    home: https://github.com/FIWARE/context.Orion-LD
+    icon: https://fiware.github.io/catalogue/img/fiware.png
+    keywords:
+    - fiware
+    - orion-ld
+    kubeVersion: '>= 1.19'
+    maintainers:
+    - email: stefan.wiedemann@fiware.org
+      name: wistefan
+    name: orion-ld
+    sources:
+    - https://github.com/FIWARE/context.Orion-LD
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/fiware-orion-ld-1.0.2/fiware-orion-ld-1.0.2.tgz
+    version: 1.0.2
+  - annotations:
+      charts.openshift.io/digest: sha256:4fbe5370fcc2d45adf73d69320f2efb193c2946faf359b6436ac27dc06c8a359
+      charts.openshift.io/lastCertifiedTimestamp: '2022-05-05T12:16:10.065501+00:00'
+      charts.openshift.io/provider: FIWARE FOUNDATION E V
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-05-05T12:19:58.153684+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: '4.8'
+    apiVersion: v2
+    appVersion: 1.0.1
+    description: A Helm chart for running the fiware orion-ld context broker on kubernetes.
+    digest: 810e43a784a63a1cbaad8129c7772202961077528a6b1fd9fd5952dfd32dd75f
+    home: https://github.com/FIWARE/context.Orion-LD
+    icon: https://fiware.github.io/catalogue/img/fiware.png
+    keywords:
+    - fiware
+    - orion-ld
+    kubeVersion: '>= 1.19'
+    maintainers:
+    - email: stefan.wiedemann@fiware.org
+      name: wistefan
+    name: orion-ld
+    sources:
+    - https://github.com/FIWARE/context.Orion-LD
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/fiware-orion-ld-1.0.3/fiware-orion-ld-1.0.3.tgz
+    version: 1.0.3
+  osm-edge:
+  - annotations:
+      charts.openshift.io/digest: sha256:d83f822d56f8c4d745edc6b95d974956c49e597a20b9ea5467e9af2228153688
+      charts.openshift.io/lastCertifiedTimestamp: '2022-12-06T16:06:40.631021+08:00'
+      charts.openshift.io/provider: Flomesh
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-12-06T09:01:24.866069+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.6'
+      charts.openshift.io/testedOpenShiftVersion: '4.7'
+    apiVersion: v2
+    appVersion: 1.2.1-ubi8
+    dependencies:
+    - condition: contour.enabled
+      name: contour
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.0.4
+    - condition: fsm.enabled
+      name: fsm
+      repository: https://charts.flomesh.io
+      version: 0.1.8-ubi.6
+    description: A Helm chart to install the osm-edge control plane on Kubernetes
+    digest: a73ed31b8162fc88dc532b20ec317a8885d2a67e1378e69c22b159c62641b90e
+    kubeVersion: '>= 1.19.0-0'
+    name: osm-edge
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/flomesh-osm-edge-1.2.1-ubi8/flomesh-osm-edge-1.2.1-ubi8.tgz
+    version: 1.2.1-ubi8
+  pubsubplus-openshift:
+  - annotations:
+      charts.openshift.io/digest: sha256:088b96c259efc2e3338a491a23904533fe94c49334c3c305b54a44987bd3eb4d
+      charts.openshift.io/lastCertifiedTimestamp: '2022-02-04T18:24:20.678551+00:00'
+      charts.openshift.io/provider: Solace Systems
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-02-04T18:24:55.525272+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.9'
+    apiVersion: v2
+    description: Deploy a single-node non-HA Solace PubSub+ Event Broker Software
+      on OpenShift
+    digest: ddddf055d0a81e871d0cfa983a8a7f29c9a83b11a02225ac1e3acdffb8936409
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-3.0.0/solace-pubsubplus-openshift-3.0.0.tgz
+    version: 3.0.0
+  - annotations:
+      charts.openshift.io/digest: sha256:4f3bbe183b46ead61e308240d6f7db06295f040d4f41c5ade8eacfeb4774ce87
+      charts.openshift.io/lastCertifiedTimestamp: '2022-05-12T12:45:00.973941+00:00'
+      charts.openshift.io/provider: Solace Corporation
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-05-12T12:49:22.993288+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: 4.10.6
+    apiVersion: v2
+    description: Deploy a single-node non-HA Solace PubSub+ Event Broker Software
+      on OpenShift
+    digest: 349d5abd23672825c62e1e68bb9dab8f759e07521b5fec956bd880d3e4c21bb8
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-3.1.0/solace-pubsubplus-openshift-3.1.0.tgz
+    version: 3.1.0
+  - annotations:
+      charts.openshift.io/digest: sha256:986816ed7535a9e004944eb90e9e16b32626d3c114b9c9f96e028c4beeca55e5
+      charts.openshift.io/lastCertifiedTimestamp: '2023-07-14T22:35:59.640808+00:00'
+      charts.openshift.io/name: PubSub+ Event Broker, non-HA
+      charts.openshift.io/provider: Solace Corporation
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-07-14T23:09:59.174021+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    description: Deploy a single-node non-HA Solace PubSub+ Event Broker Software
+      on OpenShift
+    digest: 2ccb0c7a727e71d420fc0deaa00f16fede3d1712ca35290ab242c026a7b1526e
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-3.3.1/pubsubplus-openshift-3.3.1.tgz
+    version: 3.3.1
+  - annotations:
+      charts.openshift.io/digest: sha256:a801805c57b3a8a726c41b616b056c18c5982ffe7d25ac844adc34db63a5d177
+      charts.openshift.io/lastCertifiedTimestamp: '2023-08-14T19:22:08.34738+00:00'
+      charts.openshift.io/name: PubSub+ Event Broker, non-HA
+      charts.openshift.io/provider: Solace Corporation
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-08-14T22:03:24.302011+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    description: Deploy a single-node non-HA Solace PubSub+ Event Broker Software
+      on OpenShift
+    digest: 5aed1044cf6a5bef1e0d0e47d16180da2188f689be832818dbddbdb77c6806a5
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-helm-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-3.3.2/pubsubplus-openshift-3.3.2.tgz
+    version: 3.3.2
+  pubsubplus-openshift-dev:
+  - annotations:
+      charts.openshift.io/digest: sha256:19199b26bcb0740e0643ad6341ae180848f9e73f25bc8e512a5e50e89529eee4
+      charts.openshift.io/lastCertifiedTimestamp: '2022-02-04T19:16:20.999165+00:00'
+      charts.openshift.io/provider: Solace Systems
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-02-04T19:16:43.341972+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.9'
+    apiVersion: v2
+    description: Deploy a minimum footprint single-node non-HA Solace PubSub+ Event
+      Broker Software on OpenShift for development purposes
+    digest: 3ec9eb9592729901665bfb01e4ab6602175a9c3f46a5396766094bf7915af0ec
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift-dev
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-dev-3.0.0/solace-pubsubplus-openshift-dev-3.0.0.tgz
+    version: 3.0.0
+  - annotations:
+      charts.openshift.io/digest: sha256:b0afa5fcaafbd7c909b60d49e413d40075c46ed63002a63de7dea7e76be2327c
+      charts.openshift.io/lastCertifiedTimestamp: '2022-05-12T12:38:15.457807+00:00'
+      charts.openshift.io/provider: Solace Corporation
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-05-12T12:40:51.615863+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: 4.10.6
+    apiVersion: v2
+    description: Deploy a minimum footprint single-node non-HA Solace PubSub+ Event
+      Broker Software on OpenShift for development purposes
+    digest: b5b328607cf14414fde6b9ad1903b3d891c8aef619e4d2bbe2c6b8199afa9306
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift-dev
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-dev-3.1.0/solace-pubsubplus-openshift-dev-3.1.0.tgz
+    version: 3.1.0
+  - annotations:
+      charts.openshift.io/digest: sha256:62d193b32a48ace7c97a6fe5302948986f6492324d9fe722e52bc470d5767293
+      charts.openshift.io/lastCertifiedTimestamp: '2023-07-14T22:37:16.281755+00:00'
+      charts.openshift.io/name: PubSub+ Event Broker for Developers
+      charts.openshift.io/provider: Solace Corporation
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-07-14T23:14:08.349902+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    description: Deploy a minimum footprint single-node non-HA Solace PubSub+ Event
+      Broker Software on OpenShift for development purposes
+    digest: 6cd39014c6a56390aec7680f777874a488eb75b947e94091fb5b2e8f72c236cf
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift-dev
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-dev-3.3.1/pubsubplus-openshift-dev-3.3.1.tgz
+    version: 3.3.1
+  - annotations:
+      charts.openshift.io/digest: sha256:dd7742c2a2f7475a1029d322928e336685f99b4d508b9434ee999af203d5fdd4
+      charts.openshift.io/lastCertifiedTimestamp: '2023-08-14T19:23:25.265065+00:00'
+      charts.openshift.io/name: PubSub+ Event Broker for Developers
+      charts.openshift.io/provider: Solace Corporation
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-08-14T22:12:39.454775+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    description: Deploy a minimum footprint single-node non-HA Solace PubSub+ Event
+      Broker Software on OpenShift for development purposes
+    digest: 482e5e8f13e355180ae8d725ed6eecddaf7facbbf6faa5ec45c92ff874d34bf7
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-helm-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift-dev
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-dev-3.3.2/pubsubplus-openshift-dev-3.3.2.tgz
+    version: 3.3.2
+  pubsubplus-openshift-ha:
+  - annotations:
+      charts.openshift.io/digest: sha256:00544736dcad0552b0adb2fa72275c9fd04783464b7c072ae35332ffc456d60f
+      charts.openshift.io/lastCertifiedTimestamp: '2022-02-07T12:23:57.040776+00:00'
+      charts.openshift.io/provider: Solace Systems
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-02-07T12:28:26.223625+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.9'
+    apiVersion: v2
+    description: Deploy an HA redundancy group of Solace PubSub+ Event Broker Software
+      on OpenShift
+    digest: 077c18cbe315616a7f12dcd656fd6a1b48671f973cdd47b69fa4a7a72975b187
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift-ha
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-ha-3.0.0/solace-pubsubplus-openshift-ha-3.0.0.tgz
+    version: 3.0.0
+  - annotations:
+      charts.openshift.io/digest: sha256:cc470f47da74ba72916be7237d2afae0838787985bd60ad0e7f8b4463b962e4f
+      charts.openshift.io/lastCertifiedTimestamp: '2022-05-12T16:31:14.529756+00:00'
+      charts.openshift.io/provider: Solace Corporation
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-05-12T16:34:52.746764+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    description: Deploy an HA redundancy group of Solace PubSub+ Event Broker Software
+      on OpenShift
+    digest: 3cd82925efcd7a7543dafe2cb5c83f63e51bb50462ab8b7268a268102c72a8f2
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift-ha
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-ha-3.1.0/solace-pubsubplus-openshift-ha-3.1.0.tgz
+    version: 3.1.0
+  - annotations:
+      charts.openshift.io/digest: sha256:c3a8e821594e6a8b86f12a7bf1f1ea3dfba5137eb6fa12e47ddd9eac994b9934
+      charts.openshift.io/lastCertifiedTimestamp: '2023-07-14T22:52:19.175827+00:00'
+      charts.openshift.io/name: PubSub+ Event Broker, HA
+      charts.openshift.io/provider: Solace Corporation
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-07-14T23:18:31.265562+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    description: Deploy an HA redundancy group of Solace PubSub+ Event Broker Software
+      on OpenShift
+    digest: 992c5410c81937e56732c792892cdbfab95533689e9343871e1a3e9641998a90
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift-ha
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-ha-3.3.1/pubsubplus-openshift-ha-3.3.1.tgz
+    version: 3.3.1
+  - annotations:
+      charts.openshift.io/digest: sha256:129dd74918d4507afb1b6e0871ee54e4ca47588d8f92484fada5adcc52620d2f
+      charts.openshift.io/lastCertifiedTimestamp: '2023-08-14T20:23:53.492458+00:00'
+      charts.openshift.io/name: PubSub+ Event Broker, HA
+      charts.openshift.io/provider: Solace Corporation
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-08-14T22:16:10.916791+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    description: Deploy an HA redundancy group of Solace PubSub+ Event Broker Software
+      on OpenShift
+    digest: 0c8d5f8293a6d8faf4d2f73e7e80867871bfc99e92360740b4c161fc77c2e3cb
+    home: https://dev.solace.com
+    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-helm-quickstart/images/PubSubPlus.png
+    keywords:
+    - solace
+    - pubsubplus
+    - pubsub+
+    - pubsub
+    - messaging
+    - advanced event broker
+    - event broker
+    - event mesh
+    - event streaming
+    - data streaming
+    - event integration
+    - middleware
+    kubeVersion: '>= 1.10.0-0'
+    maintainers:
+    - name: Solace Community Forum
+      url: https://solace.community/
+    - name: Solace Support
+      url: https://solace.com/support/
+    name: pubsubplus-openshift-ha
+    sources:
+    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-ha-3.3.2/pubsubplus-openshift-ha-3.3.2.tgz
+    version: 3.3.2
   rafay-operator-redhat:
   - annotations:
       charts.openshift.io/digest: sha256:e90ed52496459379a844f3c7e258f6e71f024ab6ed0a8530be643f84003d5987
@@ -5214,555 +5154,693 @@ entries:
     urls:
     - https://github.com/openshift-helm-charts/charts/releases/download/redhat-wildfly-1.5.5/redhat-wildfly-1.5.5.tgz
     version: 1.5.5
-  pubsubplus-openshift:
+  sagent:
   - annotations:
-      charts.openshift.io/digest: sha256:088b96c259efc2e3338a491a23904533fe94c49334c3c305b54a44987bd3eb4d
-      charts.openshift.io/lastCertifiedTimestamp: '2022-02-04T18:24:20.678551+00:00'
-      charts.openshift.io/provider: Solace Systems
+      charts.openshift.io/digest: sha256:972947be3ede8321884a9079de17815ce8ca7a1805aea0bf00c1bf661be67b1b
+      charts.openshift.io/lastCertifiedTimestamp: '2022-12-06T14:51:36.962455+00:00'
+      charts.openshift.io/provider: Granulate
       charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-02-04T18:24:55.525272+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.9'
-    apiVersion: v2
-    description: Deploy a single-node non-HA Solace PubSub+ Event Broker Software
-      on OpenShift
-    digest: ddddf055d0a81e871d0cfa983a8a7f29c9a83b11a02225ac1e3acdffb8936409
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-3.0.0/solace-pubsubplus-openshift-3.0.0.tgz
-    version: 3.0.0
-  - annotations:
-      charts.openshift.io/digest: sha256:4f3bbe183b46ead61e308240d6f7db06295f040d4f41c5ade8eacfeb4774ce87
-      charts.openshift.io/lastCertifiedTimestamp: '2022-05-12T12:45:00.973941+00:00'
-      charts.openshift.io/provider: Solace Corporation
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-05-12T12:49:22.993288+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: 4.10.6
-    apiVersion: v2
-    description: Deploy a single-node non-HA Solace PubSub+ Event Broker Software
-      on OpenShift
-    digest: 349d5abd23672825c62e1e68bb9dab8f759e07521b5fec956bd880d3e4c21bb8
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-3.1.0/solace-pubsubplus-openshift-3.1.0.tgz
-    version: 3.1.0
-  - annotations:
-      charts.openshift.io/digest: sha256:986816ed7535a9e004944eb90e9e16b32626d3c114b9c9f96e028c4beeca55e5
-      charts.openshift.io/lastCertifiedTimestamp: '2023-07-14T22:35:59.640808+00:00'
-      charts.openshift.io/name: PubSub+ Event Broker, non-HA
-      charts.openshift.io/provider: Solace Corporation
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-07-14T23:09:59.174021+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    description: Deploy a single-node non-HA Solace PubSub+ Event Broker Software
-      on OpenShift
-    digest: 2ccb0c7a727e71d420fc0deaa00f16fede3d1712ca35290ab242c026a7b1526e
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-3.3.1/pubsubplus-openshift-3.3.1.tgz
-    version: 3.3.1
-  - annotations:
-      charts.openshift.io/digest: sha256:a801805c57b3a8a726c41b616b056c18c5982ffe7d25ac844adc34db63a5d177
-      charts.openshift.io/lastCertifiedTimestamp: '2023-08-14T19:22:08.34738+00:00'
-      charts.openshift.io/name: PubSub+ Event Broker, non-HA
-      charts.openshift.io/provider: Solace Corporation
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-08-14T22:03:24.302011+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    description: Deploy a single-node non-HA Solace PubSub+ Event Broker Software
-      on OpenShift
-    digest: 5aed1044cf6a5bef1e0d0e47d16180da2188f689be832818dbddbdb77c6806a5
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-helm-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-3.3.2/pubsubplus-openshift-3.3.2.tgz
-    version: 3.3.2
-  pubsubplus-openshift-dev:
-  - annotations:
-      charts.openshift.io/digest: sha256:19199b26bcb0740e0643ad6341ae180848f9e73f25bc8e512a5e50e89529eee4
-      charts.openshift.io/lastCertifiedTimestamp: '2022-02-04T19:16:20.999165+00:00'
-      charts.openshift.io/provider: Solace Systems
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-02-04T19:16:43.341972+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.9'
-    apiVersion: v2
-    description: Deploy a minimum footprint single-node non-HA Solace PubSub+ Event
-      Broker Software on OpenShift for development purposes
-    digest: 3ec9eb9592729901665bfb01e4ab6602175a9c3f46a5396766094bf7915af0ec
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift-dev
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-dev-3.0.0/solace-pubsubplus-openshift-dev-3.0.0.tgz
-    version: 3.0.0
-  - annotations:
-      charts.openshift.io/digest: sha256:b0afa5fcaafbd7c909b60d49e413d40075c46ed63002a63de7dea7e76be2327c
-      charts.openshift.io/lastCertifiedTimestamp: '2022-05-12T12:38:15.457807+00:00'
-      charts.openshift.io/provider: Solace Corporation
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-05-12T12:40:51.615863+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: 4.10.6
-    apiVersion: v2
-    description: Deploy a minimum footprint single-node non-HA Solace PubSub+ Event
-      Broker Software on OpenShift for development purposes
-    digest: b5b328607cf14414fde6b9ad1903b3d891c8aef619e4d2bbe2c6b8199afa9306
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift-dev
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-dev-3.1.0/solace-pubsubplus-openshift-dev-3.1.0.tgz
-    version: 3.1.0
-  - annotations:
-      charts.openshift.io/digest: sha256:62d193b32a48ace7c97a6fe5302948986f6492324d9fe722e52bc470d5767293
-      charts.openshift.io/lastCertifiedTimestamp: '2023-07-14T22:37:16.281755+00:00'
-      charts.openshift.io/name: PubSub+ Event Broker for Developers
-      charts.openshift.io/provider: Solace Corporation
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-07-14T23:14:08.349902+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    description: Deploy a minimum footprint single-node non-HA Solace PubSub+ Event
-      Broker Software on OpenShift for development purposes
-    digest: 6cd39014c6a56390aec7680f777874a488eb75b947e94091fb5b2e8f72c236cf
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift-dev
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-dev-3.3.1/pubsubplus-openshift-dev-3.3.1.tgz
-    version: 3.3.1
-  - annotations:
-      charts.openshift.io/digest: sha256:dd7742c2a2f7475a1029d322928e336685f99b4d508b9434ee999af203d5fdd4
-      charts.openshift.io/lastCertifiedTimestamp: '2023-08-14T19:23:25.265065+00:00'
-      charts.openshift.io/name: PubSub+ Event Broker for Developers
-      charts.openshift.io/provider: Solace Corporation
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-08-14T22:12:39.454775+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    description: Deploy a minimum footprint single-node non-HA Solace PubSub+ Event
-      Broker Software on OpenShift for development purposes
-    digest: 482e5e8f13e355180ae8d725ed6eecddaf7facbbf6faa5ec45c92ff874d34bf7
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-helm-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift-dev
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-dev-3.3.2/pubsubplus-openshift-dev-3.3.2.tgz
-    version: 3.3.2
-  pubsubplus-openshift-ha:
-  - annotations:
-      charts.openshift.io/digest: sha256:00544736dcad0552b0adb2fa72275c9fd04783464b7c072ae35332ffc456d60f
-      charts.openshift.io/lastCertifiedTimestamp: '2022-02-07T12:23:57.040776+00:00'
-      charts.openshift.io/provider: Solace Systems
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-02-07T12:28:26.223625+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.9'
-    apiVersion: v2
-    description: Deploy an HA redundancy group of Solace PubSub+ Event Broker Software
-      on OpenShift
-    digest: 077c18cbe315616a7f12dcd656fd6a1b48671f973cdd47b69fa4a7a72975b187
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift-ha
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-ha-3.0.0/solace-pubsubplus-openshift-ha-3.0.0.tgz
-    version: 3.0.0
-  - annotations:
-      charts.openshift.io/digest: sha256:cc470f47da74ba72916be7237d2afae0838787985bd60ad0e7f8b4463b962e4f
-      charts.openshift.io/lastCertifiedTimestamp: '2022-05-12T16:31:14.529756+00:00'
-      charts.openshift.io/provider: Solace Corporation
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2022-05-12T16:34:52.746764+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.10'
-    apiVersion: v2
-    description: Deploy an HA redundancy group of Solace PubSub+ Event Broker Software
-      on OpenShift
-    digest: 3cd82925efcd7a7543dafe2cb5c83f63e51bb50462ab8b7268a268102c72a8f2
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift-ha
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-ha-3.1.0/solace-pubsubplus-openshift-ha-3.1.0.tgz
-    version: 3.1.0
-  - annotations:
-      charts.openshift.io/digest: sha256:c3a8e821594e6a8b86f12a7bf1f1ea3dfba5137eb6fa12e47ddd9eac994b9934
-      charts.openshift.io/lastCertifiedTimestamp: '2023-07-14T22:52:19.175827+00:00'
-      charts.openshift.io/name: PubSub+ Event Broker, HA
-      charts.openshift.io/provider: Solace Corporation
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-07-14T23:18:31.265562+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    description: Deploy an HA redundancy group of Solace PubSub+ Event Broker Software
-      on OpenShift
-    digest: 992c5410c81937e56732c792892cdbfab95533689e9343871e1a3e9641998a90
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift-ha
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-ha-3.3.1/pubsubplus-openshift-ha-3.3.1.tgz
-    version: 3.3.1
-  - annotations:
-      charts.openshift.io/digest: sha256:129dd74918d4507afb1b6e0871ee54e4ca47588d8f92484fada5adcc52620d2f
-      charts.openshift.io/lastCertifiedTimestamp: '2023-08-14T20:23:53.492458+00:00'
-      charts.openshift.io/name: PubSub+ Event Broker, HA
-      charts.openshift.io/provider: Solace Corporation
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-08-14T22:16:10.916791+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.1'
-      charts.openshift.io/testedOpenShiftVersion: '4.13'
-    apiVersion: v2
-    description: Deploy an HA redundancy group of Solace PubSub+ Event Broker Software
-      on OpenShift
-    digest: 0c8d5f8293a6d8faf4d2f73e7e80867871bfc99e92360740b4c161fc77c2e3cb
-    home: https://dev.solace.com
-    icon: https://solaceproducts.github.io/pubsubplus-kubernetes-helm-quickstart/images/PubSubPlus.png
-    keywords:
-    - solace
-    - pubsubplus
-    - pubsub+
-    - pubsub
-    - messaging
-    - advanced event broker
-    - event broker
-    - event mesh
-    - event streaming
-    - data streaming
-    - event integration
-    - middleware
-    kubeVersion: '>= 1.10.0-0'
-    maintainers:
-    - name: Solace Community Forum
-      url: https://solace.community/
-    - name: Solace Support
-      url: https://solace.com/support/
-    name: pubsubplus-openshift-ha
-    sources:
-    - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/solace-pubsubplus-openshift-ha-3.3.2/pubsubplus-openshift-ha-3.3.2.tgz
-    version: 3.3.2
-  canvas-dmid:
-  - annotations:
-      charts.openshift.io/digest: sha256:947a298988ef9d58d9efd7d443f09ea8679dd4f177cdefd92da0fa036cab83e7
-      charts.openshift.io/lastCertifiedTimestamp: '2023-05-10T15:05:16.249174+00:00'
-      charts.openshift.io/provider: Telenity Iletisim Sistemleri Sa
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-05-10T15:05:54.991057+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
-      charts.openshift.io/testedOpenShiftVersion: '4.12'
-    apiVersion: v2
-    appVersion: 0.0.0
-    description: Canvas DMID Helm Chart
-    digest: 8574bdbbbb0c168eb9de7dcb1576ab0cc1de06ece63fd8f9731eb7380d1f59e6
-    kubeVersion: '>=v1.21.2'
-    maintainers:
-    - email: info@telenity.com
-      name: Telenity
-      url: https://www.telenity.com
-    name: canvas-dmid
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/telenity-canvas-dmid-3.0.1/canvas-dmid-3.0.1.tgz
-    version: 3.0.1
-  canvas-oamportal:
-  - annotations:
-      charts.openshift.io/digest: sha256:66b9a3f252e9a46fe7b1b6af68bc9d24798e85eb75280fdcaa02c23a6982ea5b
-      charts.openshift.io/lastCertifiedTimestamp: '2023-05-10T19:35:01.511479+00:00'
-      charts.openshift.io/provider: Telenity Iletisim Sistemleri Sa
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-05-10T19:35:37.574873+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
-      charts.openshift.io/testedOpenShiftVersion: '4.12'
-    apiVersion: v2
-    appVersion: 3.0.24-SNAPSHOT
-    description: Canvas OAM Portal Helm Chart
-    digest: eefead11241ab42057da5c1eda588608bb9cd6a587079d732b4c981a15dd967a
-    kubeVersion: '>=v1.21.2'
-    maintainers:
-    - email: info@telenity.com
-      name: Telenity
-      url: https://www.telenity.com
-    name: canvas-oamportal
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/telenity-canvas-oamportal-3.0.24-SNAPSHOT/canvas-oamportal-3.0.24-SNAPSHOT.tgz
-    version: 3.0.24-SNAPSHOT
-  canvas-platform:
-  - annotations:
-      charts.openshift.io/digest: sha256:834a104fd3250558a8d838001f54fc398e6e72fda9e282342448738ae849264c
-      charts.openshift.io/lastCertifiedTimestamp: '2023-05-16T17:48:34.588294-04:00'
-      charts.openshift.io/provider: Telenity Iletisim Sistemleri Sa
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-05-16T21:52:38.222976+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.8'
+      charts.openshift.io/submissionTimestamp: '2022-12-06T14:56:34.060536+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
       charts.openshift.io/testedOpenShiftVersion: '4.8'
     apiVersion: v2
-    appVersion: 3.0.0
-    dependencies:
-    - alias: dmid
-      condition: dmid.enabled
-      name: canvas-dmid
-      repository: https://nexus.telenity.com/repository/helm-telenity/
-      version: ^3
-    description: Canvas Platform Helm Chart
-    digest: acead6e0ab12f430aa463b6a31d7f48ebe9cbd825d9f30ce18a4bd626186b4c0
-    kubeVersion: '>=1.21.0'
-    maintainers:
-    - email: info@telenity.com
-      name: Telenity
-      url: https://www.telenity.com
-    name: canvas-platform
+    description: granulate sAgent daemonset helm-chart
+    digest: 5955e7fc11e55bbf2edafd9788b773b844fb15626c5ff8ff7a30a6d9034f3a75
+    kubeVersion: '>=1.20'
+    name: sagent
+    type: application
     urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/telenity-canvas-platform-3.1.5/canvas-platform-3.1.5.tgz
-    version: 3.1.5
+    - https://github.com/openshift-helm-charts/charts/releases/download/granulate-sagent-1.0.0-latest/granulate-sagent-1.0.0-latest.tgz
+    version: 1.0.0-latest
+  samplechart:
+  - annotations:
+      charts.openshift.io/digest: sha256:7eb4836e9b39d05743a44320b4b9d057269409fa0605c6c797a960221a63e214
+      charts.openshift.io/lastCertifiedTimestamp: '2022-07-03T19:10:57.461508+00:00'
+      charts.openshift.io/provider: Fredco
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-07-03T19:12:34.976945+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    appVersion: 1-42
+    description: A Helm chart for Kubernetes
+    digest: 6823ec50ab88b1cf6970bb1ce0ee696a5d78adec5ce8e7f6640b4d8d44944fb5
+    icon: https://www.example.com/chart-icon.png
+    kubeVersion: '>=1.20.0'
+    name: samplechart
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/fredco-samplechart-0.1.1/fredco-samplechart-0.1.1.tgz
+    version: 0.1.1
+  - annotations:
+      charts.openshift.io/digest: sha256:4abe3a57dcc5865e006b8165507a06b4f165b282a53afb3060a1ff0733c4f2dd
+      charts.openshift.io/lastCertifiedTimestamp: '2022-07-06T01:34:49.552863+00:00'
+      charts.openshift.io/provider: Fredco
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-07-06T01:36:21.837707+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    appVersion: 1-42
+    description: A Helm chart for Kubernetes
+    digest: 83770ebbecceabdfe413e37692c89344f8e1c9951fb4be68f083834815c864f2
+    icon: https://www.example.com/chart-icon.png
+    kubeVersion: '>=1.20.0'
+    name: samplechart
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/fredco-samplechart-0.1.2/fredco-samplechart-0.1.2.tgz
+    version: 0.1.2
+  - annotations:
+      charts.openshift.io/digest: sha256:ee1cd21270b6e5d6881ae456557d4143efe3f5ddb0117c87f931489ed31a34fc
+      charts.openshift.io/lastCertifiedTimestamp: '2022-08-29T07:55:59.697791+00:00'
+      charts.openshift.io/provider: Fredco
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-08-29T07:57:22.906169+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    appVersion: 1-42
+    description: A Helm chart for Kubernetes
+    digest: c147b2b7518d6631892477c881be12ccca5328837050da371317a4ba06177e65
+    icon: https://www.example.com/chart-icon.png
+    kubeVersion: '>=1.20.0'
+    name: samplechart
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/fredco-samplechart-0.1.3/fredco-samplechart-0.1.3.tgz
+    version: 0.1.3
+  uv-helm:
+  - annotations:
+      charts.openshift.io/digest: sha256:4e7e593c0f1e3fd1d8b984122516d56d5c82035b6da313aac9c8ef12da64173a
+      charts.openshift.io/lastCertifiedTimestamp: '2022-09-23T20:35:00.390109+08:00'
+      charts.openshift.io/provider: EXFO Inc.
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-09-23T12:57:32.941284+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    appVersion: 0.2.0
+    description: A Helm chart for Kubernetes
+    digest: e22a5b5f5f7159c1af3f6ae7d06ff219f6a2fa075aa8e500b27ebc93ecaac77c
+    icon: https://www.exfo.com/dist/atomic/organism/o-header/o-header-banner/exfo.png
+    kubeVersion: '>=1.20.0-0'
+    name: uv-helm
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/exfo-uv-helm-0.1.3/exfo-uv-helm-0.1.3.tgz
+    version: 0.1.3
+  uverifier:
+  - annotations:
+      charts.openshift.io/digest: sha256:74fa80d28a46d9da1ae7a74bc050449164389a358bd13bd2fb2a23d4770a9206
+      charts.openshift.io/lastCertifiedTimestamp: '2022-07-20T16:33:20.993665+08:00'
+      charts.openshift.io/provider: EXFO Inc.
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-07-20T08:38:02.575174+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    appVersion: 0.2.0
+    description: A Helm chart for Kubernetes
+    digest: 388968518305560104f0422c70cb9a1511415779ebf65fd2d2ae915eda544c7e
+    icon: https://www.exfo.com/dist/atomic/organism/o-header/o-header-banner/exfo.png
+    kubeVersion: '>=1.20.0-0'
+    name: uverifier
+    type: application
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/exfo-uverifier-0.1.2/exfo-uverifier-0.1.2.tgz
+    version: 0.1.2
+  vault:
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
+      charts.openshift.io/digest: sha256:ec2c09a0e5994ddb5014eea3db3c8bce41166ffa91471a06101890c6b39df36e
+      charts.openshift.io/lastCertifiedTimestamp: '2021-06-21T16:53:57.543151+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-06-21T16:54:21.970103+00:00'
+    apiVersion: v2
+    appVersion: 1.7.2
+    description: Official HashiCorp Vault Chart
+    digest: b07be2a554ecbe6a6dd48ea763ed568de317d17cf1a19fb11ddb562983286555
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.12.0/hashicorp-vault-0.12.0.tgz
+    version: 0.12.0
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
+      charts.openshift.io/digest: sha256:2e96d8f78fb494c8a5d6b9e21b677897011a55f8a005253f0e8dcf996c1d4183
+      charts.openshift.io/lastCertifiedTimestamp: '2021-06-22T22:38:14.728363+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-06-22T22:38:35.745947+00:00'
+    apiVersion: v2
+    appVersion: 1.7.3
+    description: Official HashiCorp Vault Chart
+    digest: 97e274069d9d3d028903610a3f9fca892b2620f0a334de6215ec5f962328586f
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.13.0/hashicorp-vault-0.13.0.tgz
+    version: 0.13.0
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
+      charts.openshift.io/digest: sha256:1d265a29ff69dc9765b5e19a9d10eabf038aee993ee2f506db2803814b1a6cb1
+      charts.openshift.io/lastCertifiedTimestamp: '2021-07-29T21:27:42.853986+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-07-29T21:28:20.656909+00:00'
+    apiVersion: v2
+    appVersion: 1.8.0
+    description: Official HashiCorp Vault Chart
+    digest: 02d3f8169455f4cd802acc971995bb5238d8cbaed6649bc555462fcf233f4446
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.14.0/hashicorp-vault-0.14.0.tgz
+    version: 0.14.0
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.7'
+      charts.openshift.io/digest: sha256:935c1f1a02b5e709ef7fa299bf15d28ebc513e21f34221a548b847c88a918d88
+      charts.openshift.io/lastCertifiedTimestamp: '2021-08-23T16:53:50.420895+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-08-23T16:54:29.487621+00:00'
+    apiVersion: v2
+    appVersion: 1.8.1
+    description: Official HashiCorp Vault Chart
+    digest: 0f2f9d587ac16c1e35a512a453d2f78c337483751651c8b8934d0a7197126fc0
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.15.0/hashicorp-vault-0.15.0.tgz
+    version: 0.15.0
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
+      charts.openshift.io/digest: sha256:23af06611fd50a7dfce79b75a62ce203de815d600abd18554daa6bde45a7c303
+      charts.openshift.io/lastCertifiedTimestamp: '2021-09-16T17:56:11.189486+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-09-16T17:57:08.574025+00:00'
+    apiVersion: v2
+    appVersion: 1.8.2
+    description: Official HashiCorp Vault Chart
+    digest: 3fe196640d3ce0c15564e356f0cfea8be89ba7bec27e369055869ffde1250975
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.16.0/hashicorp-vault-0.16.0.tgz
+    version: 0.16.0
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
+      charts.openshift.io/digest: sha256:87484ad1b43f1d778432e0dfe8d329e0c04742ff8e27cc3d47551c3e9c6e0db2
+      charts.openshift.io/lastCertifiedTimestamp: '2021-09-30T01:12:12.92164+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-09-30T01:12:50.720810+00:00'
+    apiVersion: v2
+    appVersion: 1.8.3
+    description: Official HashiCorp Vault Chart
+    digest: 2916efbc0d3eec1c3015ec58e29208743eeb08d908f5a637d8fcf7e7c849af09
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.16.1/hashicorp-vault-0.16.1.tgz
+    version: 0.16.1
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
+      charts.openshift.io/digest: sha256:3a6aa1ab8cd499580b40c729fc4d7136462908fb3c9c14807a7b05be560da9a4
+      charts.openshift.io/lastCertifiedTimestamp: '2021-10-21T20:02:21.83474+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-10-21T20:02:58.180362+00:00'
+    apiVersion: v2
+    appVersion: 1.8.4
+    description: Official HashiCorp Vault Chart
+    digest: c8f9a8c8e002cedae5bff9586edb787d8331f000199195d6793950cf402e2489
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.17.0/hashicorp-vault-0.17.0.tgz
+    version: 0.17.0
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
+      charts.openshift.io/digest: sha256:341523123a13c0b8627844ef64158989dafea04444d893f1d1e7a640ae7c7afd
+      charts.openshift.io/lastCertifiedTimestamp: '2021-11-05T17:07:18.026331+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-11-05T17:07:57.442461+00:00'
+    apiVersion: v2
+    appVersion: 1.8.4
+    description: Official HashiCorp Vault Chart
+    digest: c911780a97ef484a1d847f78e0fd8b905c62a770378c386fd3a1938b5a5fa19c
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.17.1/hashicorp-vault-0.17.1.tgz
+    version: 0.17.1
+  - annotations:
+      charts.openshift.io/certifiedOpenShiftVersions: '4.8'
+      charts.openshift.io/digest: sha256:b095c185d6764bd9b9001b252409fccc7767d8cbeeffed60cf3fbcc1227668fb
+      charts.openshift.io/lastCertifiedTimestamp: '2021-11-18T01:19:57.312218+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2021-11-18T01:20:52.063300+00:00'
+    apiVersion: v2
+    appVersion: 1.9.0
+    description: Official HashiCorp Vault Chart
+    digest: 82cdc2b639519ea668c525a711bd3bb4f865a451b632979a562eb9c052115d5f
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.18.0/hashicorp-vault-0.18.0.tgz
+    version: 0.18.0
+  - annotations:
+      charts.openshift.io/digest: sha256:177e7059cc87bd3b013a7a4c43a2c8c6c82494d42d6f1bd8b733cb69f57add0d
+      charts.openshift.io/lastCertifiedTimestamp: '2022-01-21T01:15:42.713543+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-01-21T01:16:16.375059+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.2'
+      charts.openshift.io/testedOpenShiftVersion: '4.9'
+    apiVersion: v2
+    appVersion: 1.9.2
+    description: Official HashiCorp Vault Chart
+    digest: 0bb6144c2b7e3d358f06a50b5bb0da86c83c195a5112da8f372df5de61655475
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.14.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.19.0/hashicorp-vault-0.19.0.tgz
+    version: 0.19.0
+  - annotations:
+      charts.openshift.io/digest: sha256:55a388096855f3dd48866d72a1d714332dfa9492714baf048aa89d6d22d1706e
+      charts.openshift.io/lastCertifiedTimestamp: '2022-05-17T11:57:48.425334+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-05-17T11:58:27.166946+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.3'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    appVersion: 1.10.3
+    description: Official HashiCorp Vault Chart
+    digest: 9c8f0a67c57f593c072708f6d90c9fbbaae8d1f601ef3a8c43c29fd5e3d99305
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.16.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.20.0/hashicorp-vault-0.20.0.tgz
+    version: 0.20.0
+  - annotations:
+      charts.openshift.io/digest: sha256:47dc35a653f8a8d1b1f9d30a55dba3be106542f2a233436aea986c5ff24edf3f
+      charts.openshift.io/lastCertifiedTimestamp: '2022-08-13T00:22:31.660332+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-08-13T00:23:04.218097+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.3'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    appVersion: 1.10.3
+    description: Official HashiCorp Vault Chart
+    digest: 8d583b2a09a6db59549124742240cf19d0c3358e912cc5c1b7b00d0639d4f804
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.16.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.20.1/hashicorp-vault-0.20.1.tgz
+    version: 0.20.1
+  - annotations:
+      charts.openshift.io/digest: sha256:3a0618a1b8616b23d82ee6f7f1e17282c25ac5b57cf214c06b20331922dfa57e
+      charts.openshift.io/lastCertifiedTimestamp: '2022-08-16T00:42:33.284605+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-08-16T00:43:11.281271+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.3'
+      charts.openshift.io/testedOpenShiftVersion: '4.10'
+    apiVersion: v2
+    appVersion: 1.11.2
+    description: Official HashiCorp Vault Chart
+    digest: 9e4527f279ebc384fecffff3da28bdef757914b9404491ddacd59549d8fac9e3
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.16.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.21.0/hashicorp-vault-0.21.0.tgz
+    version: 0.21.0
+  - annotations:
+      charts.openshift.io/digest: sha256:c1538431b9bff60dff29a7dd964166695ca62ce26bedb78c30dfbe79c30a5479
+      charts.openshift.io/lastCertifiedTimestamp: '2022-09-08T21:03:34.582365+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2022-09-08T21:04:03.210850+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.3'
+      charts.openshift.io/testedOpenShiftVersion: '4.11'
+    apiVersion: v2
+    appVersion: 1.11.3
+    description: Official HashiCorp Vault Chart
+    digest: 040dd3812ada6f4fda8505d6d07eaf04b90e0cee4bfde0794a606cd9589ce14a
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.16.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.22.0/hashicorp-vault-0.22.0.tgz
+    version: 0.22.0
+  - annotations:
+      charts.openshift.io/digest: sha256:f81757194a41dfeb36b11fe568c091cd905daf266d09c5d86825bf567ae588b2
+      charts.openshift.io/lastCertifiedTimestamp: '2023-04-06T23:13:33.212333+00:00'
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-04-06T23:14:00.356106+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
+      charts.openshift.io/testedOpenShiftVersion: '4.11'
+    apiVersion: v2
+    appVersion: 1.13.1
+    description: Official HashiCorp Vault Chart
+    digest: 31640c5725181f85a5b892150f65c8490ef534129eb891527be6f54fdfc487d8
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.22.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.24.0/vault-0.24.0.tgz
+    version: 0.24.0
+  - annotations:
+      charts.openshift.io/digest: sha256:12fd0504d7a2d63a5b192fdc87696112b7c8d126c2c4ca116a7a1a456c385eff
+      charts.openshift.io/lastCertifiedTimestamp: '2023-09-20T02:24:40.136005+00:00'
+      charts.openshift.io/name: HashiCorp Vault
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-09-20T02:25:23.369865+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.9'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    appVersion: 1.13.1
+    description: Official HashiCorp Vault Chart
+    digest: 1b43d93c7c7ee587e6452089c7b6787ad6730058007594496c5fa84ff935fda8
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.22.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.24.1/vault-0.24.1.tgz
+    version: 0.24.1
+  - annotations:
+      charts.openshift.io/digest: sha256:096b94e1c284088ea8eea7c53347d4238ed6c849d1f36328a363603e2b67d1c6
+      charts.openshift.io/lastCertifiedTimestamp: '2023-09-20T18:44:06.242822+00:00'
+      charts.openshift.io/name: HashiCorp Vault
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-09-20T18:44:41.679506+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    appVersion: 1.14.0
+    description: Official HashiCorp Vault Chart
+    digest: c4d8626eed7b73f7a7f23d78ba754fde5686ed4e2843410f2fa9f0a1b6c3aa7c
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.20.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.25.0/vault-0.25.0.tgz
+    version: 0.25.0
+  - annotations:
+      charts.openshift.io/digest: sha256:d7d15c29a6328806f0e12f073ba8d672101aa7598efde5af0eda34e5e584bb04
+      charts.openshift.io/lastCertifiedTimestamp: '2023-10-31T16:33:41.221244+00:00'
+      charts.openshift.io/name: HashiCorp Vault
+      charts.openshift.io/provider: HashiCorp
+      charts.openshift.io/providerType: partner
+      charts.openshift.io/submissionTimestamp: '2023-10-31T16:34:53.589939+00:00'
+      charts.openshift.io/supportedOpenShiftVersions: '>=4.7'
+      charts.openshift.io/testedOpenShiftVersion: '4.13'
+    apiVersion: v2
+    appVersion: 1.15.1
+    description: Official HashiCorp Vault Chart
+    digest: c94227a1eb922fb33916fd8818ddca544b0d6efb5199fb18d5c486ce1e556a1c
+    home: https://www.vaultproject.io
+    icon: https://github.com/hashicorp/vault/raw/f22d202cde2018f9455dec755118a9b84586e082/Vault_PrimaryLogo_Black.png
+    keywords:
+    - vault
+    - security
+    - encryption
+    - secrets
+    - management
+    - automation
+    - infrastructure
+    kubeVersion: '>= 1.20.0-0'
+    name: vault
+    sources:
+    - https://github.com/hashicorp/vault
+    - https://github.com/hashicorp/vault-helm
+    - https://github.com/hashicorp/vault-k8s
+    - https://github.com/hashicorp/vault-csi-provider
+    urls:
+    - https://github.com/openshift-helm-charts/charts/releases/download/hashicorp-vault-0.26.1/vault-0.26.1.tgz
+    version: 0.26.1
   wavefront:
   - annotations:
       charts.openshift.io/digest: sha256:663b50a03cf0adac0485f8731a1e0c8cb729b216f75ce9e43d1f09ffbe2faa1a
@@ -6558,53 +6636,4 @@ entries:
     urls:
     - https://charts.yugabyte.com/yugaware-openshift-2.18.2.tgz
     version: 2.18.2
-  carbonio:
-  - annotations:
-      charts.openshift.io/digest: sha256:a93c347dd88ce22a68a4c2ecb7d6c05c211db6c297b57cdd912403ee5e578857
-      charts.openshift.io/lastCertifiedTimestamp: '2023-03-23T16:45:33.120585+01:00'
-      charts.openshift.io/provider: Zextras Srl
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-03-23T15:47:44.670235+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.2'
-      charts.openshift.io/testedOpenShiftVersion: '4.11'
-    apiVersion: v2
-    appVersion: 23.2.0
-    description: Official Zextras Carbonio Chart
-    digest: 18d8aa3bfaca1be4b04f01dc4fa29ccb8e2b00b01422b8a08579799fc652f0b5
-    home: https://www.zextras.com/carbonio
-    icon: https://www.zextras.com/images/carbonio_white.webp
-    keywords:
-    - carbonio
-    - email
-    - collaboration
-    - groupware
-    kubeVersion: '>= 1.14.0-0'
-    name: carbonio
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/zextras-carbonio-23.2.0/carbonio-23.2.0.tgz
-    version: 23.2.0
-  - annotations:
-      charts.openshift.io/digest: sha256:426742689a9ea566f48b8a28424eeb82cbad385d0ef0a4be350f6369795bc12b
-      charts.openshift.io/lastCertifiedTimestamp: '2023-03-23T18:10:46.447224+01:00'
-      charts.openshift.io/provider: Zextras Srl
-      charts.openshift.io/providerType: partner
-      charts.openshift.io/submissionTimestamp: '2023-03-23T17:15:08.856475+00:00'
-      charts.openshift.io/supportedOpenShiftVersions: '>=4.2'
-      charts.openshift.io/testedOpenShiftVersion: '4.11'
-    apiVersion: v2
-    appVersion: 23.3.0
-    description: Official Zextras Carbonio Chart
-    digest: 64743919a2160901d75b3c33b59336274af05c6573ee280e2da94cce9f53f0aa
-    home: https://www.zextras.com/carbonio
-    icon: https://www.zextras.com/images/carbonio_white.webp
-    keywords:
-    - carbonio
-    - email
-    - collaboration
-    - groupware
-    kubeVersion: '>= 1.14.0-0'
-    name: carbonio
-    urls:
-    - https://github.com/openshift-helm-charts/charts/releases/download/zextras-carbonio-23.3.0/carbonio-23.3.0.tgz
-    version: 23.3.0
-generated: '2023-10-31T16:34:53.589939+00:00'
+generated: '2023-11-10T21:25:01.854105+00:00'
