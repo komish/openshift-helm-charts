@@ -1,0 +1,9 @@
+chart:
+  name: redhat-gosnappassredhat
+  shortDescription: description
+publicPgpKey: null
+users:
+  - githubUsername: komish
+vendor:
+  label: redhat
+  name: Red Hat
