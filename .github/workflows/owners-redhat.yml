@@ -1,0 +1,67 @@
+name: Red Hat OWNERS Files
+
+# On OWNERS file submissions, this workflow will check to make sure
+# that the path of the submission has the appropriate chart name prefix.
+# TODO: Also check the OWNERS file itself
+
+on:
+  pull_request:
+    paths:
+    - charts/redhat/**/OWNERS
+    - charts/community/redhat/**/OWNERS
+
+jobs:
+  gather-metadata:
+    name: Gather Metadata From Path
+    outputs:
+      category: ${{ steps.gather-metadata.outputs.category }}
+      organization: ${{ steps.gather-metadata.outputs.organization }}
+      chartname: ${{ steps.gather-metadata.outputs.chart-name }}
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install Python CI tooling
+        working-directory: scripts
+        run: |
+          make venv.tools
+      
+      - name: Gather Metadata
+        id: gather-metadata
+        env:
+          API_URL: ${{ github.event.pull_request._links.self.href }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: |
+          ./scripts/venv.tools/bin/extract-metadata-from-pr \
+            --emit-to-github-output \
+            ${{ env.API_URL }}
+
+  ensure-prefix-in-path-or-notify:
+    name: Ensure chart name prefix
+    runs-on: ubuntu-latest
+    needs: [gather-metadata]
+    steps:
+      - name: Confirm Prefix
+        id: confirm-prefix
+        run: echo ${{ needs.gather-metadata.outputs.chartname }} | grep "^redhat-"
+      - name: Notify
+        if: failure() && steps.confirm-prefix.outcome == 'failure'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            var fs = require('fs');
+            var issue_number = ${{ github.event.number }};
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: Number(issue_number),
+              body: "### Red Hat OWNERS File Submission Check\n\n:x: Red Hat-provided charts must have the `redhat-` prefix. The path for your submission seems incorrect. :x:"
+            });
+      
