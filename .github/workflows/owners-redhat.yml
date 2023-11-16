@@ -1,8 +1,8 @@
 name: Red Hat OWNERS Files
 
-# On OWNERS file submissions, this workflow will check to make sure
-# that the path of the submission has the appropriate chart name prefix.
-# TODO: Also check the OWNERS file itself
+# On OWNERS file submissions, this workflow will check the path and the
+# contents of the file to make sure it matches expectations for Red Hat
+# submissions.
 
 on:
   pull_request:
@@ -42,7 +42,7 @@ jobs:
             --emit-to-github-output \
             ${{ env.API_URL }}
 
-  ensure-prefix-in-path-or-notify:
+  ensure-prefix-in-path:
     name: Ensure chart name prefix
     runs-on: ubuntu-latest
     needs: [gather-metadata]
@@ -50,18 +50,61 @@ jobs:
       - name: Confirm Prefix
         id: confirm-prefix
         run: echo ${{ needs.gather-metadata.outputs.chartname }} | grep "^redhat-"
+      
+  ensure-owners-file-contents:
+    name: Ensure OWNERS file contents is valid
+    runs-on: ubuntu-latest
+    needs: [gather-metadata]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+      - name: Install Python CI tooling
+        working-directory: scripts
+        run: |
+          make venv.tools
+      - name: Assert Owners File Content
+        id: assert-content
+        env:
+          CATEGORY: ${{ needs.gather-metadata.outputs.category }}
+          ORGANIZATION: ${{ needs.gather-metadata.outputs.organization }}
+          CHARTNAME: ${{ needs.gather-metadata.outputs.chartname }}
+        run: |
+          ./scripts/venv.tools/bin/assert-redhat-owners-file-meta \
+            "${CATEGORY}" \
+            "${ORGANIZATION}" \
+            "${CHARTNAME}"
+
+  notify-on-failure:
+    runs-on: ubuntu-latest
+    needs: [ensure-prefix-in-path, ensure-owners-file-contents]
+    if: failure() && (needs.ensure-prefix-in-path.outcome == 'failure' || needs.ensure-owners-file-contents-in-path.outcome == 'failure')
+    steps:
       - name: Notify
-        if: failure() && steps.confirm-prefix.outcome == 'failure'
         uses: actions/github-script@v6
+        env:
+          PREFIX_CHECK_FAILED: ${{ needs.ensure-prefix-in-path.outcome == 'failure' && 'true' || 'false' }}
+          CONTENT_CHECK_FAILED: ${{ needs.ensure-owners-file-contents-in-path.outcome == 'failure' && 'true' || 'false' }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            var fs = require('fs');
+            var comment = '### Red Hat OWNERS File Content and Path Check';
+
+            if (${{ env.PREFIX_CHECK_FAILED }}) {
+              comment = comment.concat('\n\n', ':x:Your chart name must have the "redhat-" prefix and the path of your submission looks incorrect:x:');
+            }
+
+            if (${{ env.CONTENT_CHECK_FAILED }}) {
+              comment = comment.concat('\n\n', ':x:The content of your OWNERS file does not have the proper information:x:');
+            }
+
             var issue_number = ${{ github.event.number }};
             github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: Number(issue_number),
-              body: "### Red Hat OWNERS File Submission Check\n\n:x: Red Hat-provided charts must have the `redhat-` prefix. The path for your submission seems incorrect. :x:"
+              body: comment
             });
-      
