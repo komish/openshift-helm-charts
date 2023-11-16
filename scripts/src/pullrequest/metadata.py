@@ -76,7 +76,7 @@ def extract_from_path_for_pr(pr_api_url):
 
     cat, org, name = first_match.groups()
     # normalize the partners directory to partner
-    cat = "partner" if "partners" else cat
+    cat = "partner" if cat == "partners" else cat
     return cat, org, name
 
 
