@@ -81,7 +81,7 @@ jobs:
   notify-on-failure:
     runs-on: ubuntu-latest
     needs: [ensure-prefix-in-path, ensure-owners-file-contents]
-    if: failure() && (needs.ensure-prefix-in-path.outcome == 'failure' || needs.ensure-owners-file-contents-in-path.outcome == 'failure')
+    if: needs.ensure-prefix-in-path.outcome == 'failure' || needs.ensure-owners-file-contents-in-path.outcome == 'failure'
     steps:
       - name: Notify
         uses: actions/github-script@v6
