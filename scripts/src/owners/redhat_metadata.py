@@ -43,12 +43,12 @@ def assert_redhat_metadata(contents):
     
     if owners_file.get_vendor_label(contents) != REQUIRED_VENDOR_LABEL:
         raise RedHatOwnersFileInvalidContentsError(
-            f"OWNERS file did not have expected vendor label: '${REQUIRED_VENDOR_LABEL}'"
+            f"OWNERS file did not have expected vendor label: '{REQUIRED_VENDOR_LABEL}'"
             )
 
     if owners_file.get_vendor(contents) != REQUIRED_VENDOR_NAME:
         raise RedHatOwnersFileInvalidContentsError(
-            f"OWNERS file did not have expected vendor name: '${REQUIRED_VENDOR_NAME}'"
+            f"OWNERS file did not have expected vendor name: '{REQUIRED_VENDOR_NAME}'"
             )
 
 def main():

@@ -79,27 +79,35 @@ jobs:
             "${CHARTNAME}"
 
   notify-on-failure:
+    name: Notify on failure
     runs-on: ubuntu-latest
     needs: [ensure-prefix-in-path, ensure-owners-file-contents]
-    if: failure() && (needs.ensure-prefix-in-path.result == 'failure' || needs.ensure-owners-file-contents-in-path.result == 'failure')
+    if: failure() && (needs.ensure-prefix-in-path.result == 'failure' || needs.ensure-owners-file-contents.result == 'failure')
     steps:
-      - name: Notify
+      - name: Send PR Comment
         uses: actions/github-script@v6
         env:
-          PREFIX_CHECK_FAILED: ${{ needs.ensure-prefix-in-path.result == 'failure' && 'true' || 'false' }}
-          CONTENT_CHECK_FAILED: ${{ needs.ensure-owners-file-contents-in-path.result == 'failure' && 'true' || 'false' }}
+          PREFIX_CHECK_RESULT: ${{ needs.ensure-prefix-in-path.result != '' && needs.ensure-prefix-in-path.result || 'unknown' }}
+          CONTENT_CHECK_RESULT: ${{ needs.ensure-owners-file-contents.result != '' && needs.ensure-owners-file-contents.result || 'unknown' }}
+          BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const prefixCheckResult = '${{ env.PREFIX_CHECK_RESULT }}';   
+            const contentCheckResult = '${{ env.CONTENT_CHECK_RESULT }}';
+            const buildURL='${{ env.BUILD_URL }}';
+
             var comment = '### Red Hat OWNERS File Content and Path Check';
 
-            if (${{ env.PREFIX_CHECK_FAILED }}) {
-              comment = comment.concat('\n\n', ':x:Your chart name must have the "redhat-" prefix and the path of your submission looks incorrect:x:');
+            if (prefixCheckResult == 'failure') {
+              comment = comment.concat('\n\n', ':x:The chart name in your submission path looks incorrect.:x:');
             }
 
-            if (${{ env.CONTENT_CHECK_FAILED }}) {
-              comment = comment.concat('\n\n', ':x:The content of your OWNERS file does not have the proper information:x:');
+            if (contentCheckResult == 'failure') {
+              comment = comment.concat('\n\n', ':x:The content of your OWNERS file looks incorrect!:x:');
             }
+
+            comment = comment.concat('\n\n', `Check your [workflow run](${buildURL}) for more information.`);
 
             var issue_number = ${{ github.event.number }};
             github.rest.issues.createComment({
