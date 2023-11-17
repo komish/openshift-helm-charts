@@ -1,0 +1,9 @@
+chart:
+  name: gosnappasscommunity
+  shortDescription: description
+publicPgpKey: null
+users:
+- githubUsername: komish
+vendor:
+  label: foobarbaz
+  name: Red Hat
