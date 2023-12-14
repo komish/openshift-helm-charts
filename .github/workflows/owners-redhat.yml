@@ -29,12 +29,22 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const successLabel = '${{ env.SUCCESS_LABEL }}';
-            github.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: successLabel,
-            })
+            try {
+              await github.issues.removeLabel({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: successLabel,
+              })
+            } catch (error) {
+              // a 404 indicates the label isn't here
+              if (error.status == 404) {
+                console.log('The issue did not have the label');
+                return 0;
+              }
+
+              throw error
+            }
       - name: Checkout
         uses: actions/checkout@v3
 
