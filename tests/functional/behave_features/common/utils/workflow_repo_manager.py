@@ -9,12 +9,13 @@ from tempfile import TemporaryDirectory
 
 import common.utils.github as github
 
-class WorkflowRepoManager():
+
+class WorkflowRepoManager:
     # Keep a log of things created so we can clean them up.
     __local_branches_created: [str] = []
     __local_worktrees_created: [TemporaryDirectory] = []
     # (remote, branch), e.g. ('openshift-helm-charts/charts, 'my-pr-branch')
-    __remote_branches_created: [(str, str)] = [] 
+    __remote_branches_created: [(str, str)] = []
 
     # The token to use for GitHub API operations.
     __authtoken: str = ""
@@ -30,13 +31,13 @@ class WorkflowRepoManager():
     repo: git.Repo = None
 
     def __init__(self):
-        logging.debug(f'{self} --> __init__ called!')
+        logging.debug(f"{self} --> __init__ called!")
 
         try:
             self.repo = git.Repo()
         except Exception as e:
             raise Exception(
-                f'Expected to be able to initialize a git repository at this path and failed: {e}'
+                f"Expected to be able to initialize a git repository at this path and failed: {e}"
             )
 
         self.original_branch = self.repo.active_branch.name
@@ -45,17 +46,17 @@ class WorkflowRepoManager():
         """Sets the github API token."""
         self.__authtoken = token
 
-    def push_branch(self, remote_name: str, branch_name: str, repo: git.Repo = None): 
+    def push_branch(self, remote_name: str, branch_name: str, repo: git.Repo = None):
         """Pushes the input branch_name to remote_name.
 
         The branch must exist locally before this is called, as it is not
         created by this method.
-        
+
         Args:
             remote_name: the name of the remote in organization/repository format.
             branch_name: the branch to push.
             repo: if set, overrides the use of the internal repo.
-        
+
         Raises:
            Exception: An error occurred when pushing the branch
         """
@@ -67,10 +68,9 @@ class WorkflowRepoManager():
                 "-f",
             )
         except Exception as e:
-            raise Exception(f'Unable to push branch to remote: {e}')
+            raise Exception(f"Unable to push branch to remote: {e}")
         self.__remote_branches_created.append((remote_name, branch_name))
 
-        
     def checkout_branch(self, branch_name: str):
         """Checks out a branch at branch_name and switches to it immediately.
 
@@ -81,12 +81,12 @@ class WorkflowRepoManager():
             branch_name: The branch name to create.
 
         Raises:
-           Exception: An error occurred creating the branch. 
+           Exception: An error occurred creating the branch.
         """
         try:
-            self.repo.git.checkout('-b', branch_name)
+            self.repo.git.checkout("-b", branch_name)
         except Exception as e:
-            raise Exception(f'Unable to create branch: {e}')
+            raise Exception(f"Unable to create branch: {e}")
 
         self.__local_branches_created.append(branch_name)
 
@@ -102,17 +102,17 @@ class WorkflowRepoManager():
         Raise:
             Exception: An error occurred when creating the worktree.
         """
-        worktree_dir = TemporaryDirectory(prefix='worktree-')
+        worktree_dir = TemporaryDirectory(prefix="worktree-")
 
         try:
             self.repo.git.worktree("add", "--detach", worktree_dir.name, "HEAD")
         except Exception as e:
-            raise Exception(f'Unable to create worktree: {e}')
+            raise Exception(f"Unable to create worktree: {e}")
 
         self.__local_worktrees_created.append(worktree_dir)
 
         return worktree_dir
-        
+
     def cleanup_local_branches(self):
         """Cleans up branches created by this repo manager."""
         for br in self.__local_branches_created:
@@ -120,7 +120,9 @@ class WorkflowRepoManager():
                 logging.info(f'Cleaning up generated local branch: "{br}"')
                 self.repo.git.branch("-D", br)
             except git.exc.GitCommandError:
-                logging.warn(f'local branch "{br}" could not be deleted, potentially because it did not exist')
+                logging.warn(
+                    f'local branch "{br}" could not be deleted, potentially because it did not exist'
+                )
         self.__local_branches_created = []
 
     def cleanup_worktrees(self):
@@ -128,9 +130,11 @@ class WorkflowRepoManager():
         for wt in self.__local_worktrees_created:
             logging.info(f'Cleaning up generated local worktree: "{wt}"')
             try:
-                self.repo.git.worktree('remove', wt.name)
+                self.repo.git.worktree("remove", wt.name)
             except git.exc.GitCommandError:
-                logging.warn(f'local worktree "{wt}" could not be deleted, potentially because it did not exist')
+                logging.warn(
+                    f'local worktree "{wt}" could not be deleted, potentially because it did not exist'
+                )
         self.__local_worktrees_created = []
 
     def cleanup_remote_branches(self):
@@ -144,17 +148,20 @@ class WorkflowRepoManager():
                     "delete",
                     f"repos/{remote}/git/refs/heads/{branch}",
                     self.__authtoken,
-                    )
+                )
             except git.exc.GitCommandError:
-                logging.warn(f'remote branch "{branch}" could not be deleted, potentially because it did not exist')
+                logging.warn(
+                    f'remote branch "{branch}" could not be deleted, potentially because it did not exist'
+                )
         self.__remote_branches_created = []
+
     def cleanup(self):
         """Cleans up resources created using this instance.
 
         Locally created branches and worktrees are removed. Exceptions in removing
         these will emit a log line at the warn log level.
         """
-        logging.debug(f'{self} --> cleanup called!')
+        logging.debug(f"{self} --> cleanup called!")
         self.repo.git.checkout(self.original_branch)
         self.cleanup_local_branches()
         self.cleanup_worktrees()
