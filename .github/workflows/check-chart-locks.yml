@@ -1,0 +1,47 @@
+# Check Chart Locks review the existing chart locks and fails if
+# the submission does not existing in the right directory structure.
+name: Ensure Submitter is Valid
+
+on:
+  workflow_call:
+    inputs:
+      category:
+        required: true
+        type: string
+        description: The category of the submission. (e.g. "partners", choose from [redhat, partners, community])
+      organization:
+        required: true
+        type: string
+        description: The submitting organization (e.g. "hashicorp")
+      chartname:
+        required: true
+        type: string
+        description: The name of the chart (e.g. "vault")
+
+env:
+  LOCKFILE_URL: https://komish.github.io/openshift-helm-charts/chart-locks.json
+
+jobs:
+  assert-chart-not-locked-or-locked-but-valid:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assemble directory path
+        id: assemble-path
+        run: |
+          set -o pipefail
+          echo "dirpath=${{ inputs.category }}/${{ inputs.organization }}/${{ inputs.chartname }}" | tee -a $GITHUB_OUTPUT
+      - name: Read entry from current Lockfile
+        run: |
+          wget "${{ env.LOCKFILE_URL }}" -O lock.json
+          md5sum lock.json
+      - name: Compare lockpaths
+        run: |
+          lockpath=$(jq -r .packages.${{ inputs.chartname }} lock.json)
+          test "${lockpath}" == "null" \
+            && { echo "No lock found for chart ${{ inputs.chartname }}. We're clear to merge this in."; exit 0 ;}
+          test "${lockpath}" = "${{ steps.assemble-path.outputs.dirpath }}" \
+            && { echo "Lock found for chart ${{ inputs.chartname }} and submission is coming from the correct path ${{ steps.assemble-path.outputs.dirpath }}."; exit 0 ;}
+          
+          echo "::error::Submission is invalid. The chart name '${{ inputs.chartname }}' is locked to submissions from path '${lockpath}' and this submission appears to come from '${{ steps.assemble-path.outputs.dirpath }}'"
+          exit 1
+  
