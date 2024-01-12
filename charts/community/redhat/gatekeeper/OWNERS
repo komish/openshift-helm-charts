@@ -1,6 +1,6 @@
 chart:
   name: gatekeeper
-  shortDescription: OPA Gatekeeper
+  shortDescription: OPA Gatekeeper modified
 publicPgpKey: null
 users:
 - githubUsername: thomasmckay
