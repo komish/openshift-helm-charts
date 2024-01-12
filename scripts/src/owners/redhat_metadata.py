@@ -38,7 +38,7 @@ def assert_redhat_metadata(contents):
 
     if not owners_file.get_chart(contents).startswith(REQUIRED_CHART_PREFIX):
         raise RedHatOwnersFileInvalidContentsError(
-            f"The chart name must be prefixed with '${REQUIRED_CHART_PREFIX}'."
+            f"The chart name must be prefixed with '{REQUIRED_CHART_PREFIX}'."
             )
     
     if owners_file.get_vendor_label(contents) != REQUIRED_VENDOR_LABEL:
