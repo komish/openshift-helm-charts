@@ -9,7 +9,7 @@ inputs:
   # e.g. vault
   chart-name:
     required: true
-    description: 
+    description:
       The chart name to be locked.
   # e.g. https://charts.openshift.io/chart-locks.json
   lockfile-url-override:
@@ -49,7 +49,7 @@ runs:
       if [ $GITHUB_REPOSITORY == "openshift-helm-charts/charts" ]; then
         echo "Running in the production repository"
         echo 'Ignoring input value: "${lockfileURL}"'
-        lockFileURL=https://charts.openshift.io/chart-locks.json
+        lockfileURL=https://charts.openshift.io/chart-locks.json
       fi
 
       echo "Using lockfile at path ${lockfileURL} for repository ${GITHUB_REPOSITORY}"
