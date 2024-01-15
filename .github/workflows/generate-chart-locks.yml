@@ -1,16 +1,17 @@
-# This workflow generates the JSON representation of a chart lock if it differs
-# from what's currently at LOCK_FILE_URL and creates a PR to
-# PR_DEST_BRANCH_NAME.
 name: Generate Chart Locks
+
+# This workflow generates chart-locks.json and submits it to the repository
+# if it differs from what is found in the repository at the time of execution.
+#
+# For workflow runs within openshift-helm-charts/charts, this will check for
+# the chart-locks.json file at the charts.openshift.io gh-pages vanity URL.
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - "main" # The production happy path.
+      - "e2e-lockfiles-**" # For E2E testing.
   workflow_dispatch:
-
-env:
-  PR_DEST_BRANCH_NAME: ${{ vars.TARGET_GH_PAGES_BRANCH || 'gh-pages' }}
-  LOCK_FILE_URL: ${{ vars.LOCK_FILE_URL || 'https://charts.openshift.io/chart-locks.json' }}
 
 concurrency:
   # Prevent parallel executions of this and related tasks.
@@ -18,6 +19,32 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  determine-values:
+    outputs:
+      lock-file-url: ${{ steps.determine-values.outputs.lock-file-url }}
+      pr-branch-name: ${{ steps.determine-values.outputs.pr-branch-name }}
+      pr-branch-ref: ${{ steps.determine-values.outputs.pr-branch-ref }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Determine
+      id: determine-values
+      run: |
+        # Derive the branch
+        ref=$(if [ "${GITHUB_REF}" = "refs/heads/main" ]; then echo "refs/heads/gh-pages"; else echo "${GITHUB_REF}-gh-pages"; fi)
+        prBranchName=$(echo ${ref} | awk -F / '{ print $NF }')
+        echo "Pull requests sent by this workflow will be sent to branch: '${prBranchName}'"
+        echo "pr-branch-name=${prBranchName}" | tee -a $GITHUB_OUTPUT
+        echo "pr-branch-ref=${ref}" | tee -a $GITHUB_OUTPUT
+
+        # Derive the lockfile URL
+        lockfileURL="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${prBranchName}/chart-locks.json"
+        if [ $GITHUB_REPOSITORY == "openshift-helm-charts/charts" ]; then
+          echo "Running in the production repository. Forcing the production lockfile URL."
+          lockfileURL=https://charts.openshift.io/chart-locks.json
+        fi
+        echo "Lockfile will be checked at path '${lockfileURL} "
+        echo "lock-file-url=${lockfileURL}" | tee -a $GITHUB_OUTPUT
+
   generate-chart-locks:
     outputs:
       package_locks_b64: ${{ steps.generate-chart-locks.outputs.package_locks_b64 }}
@@ -45,7 +72,9 @@ jobs:
             || { echo "::error::output package_locks_b64 did not contain valid JSON once decoded" ; exit 3 ;}
   
   compare-package-lock-manifests:
-    needs: generate-chart-locks
+    needs: 
+    - generate-chart-locks
+    - determine-values
     outputs:
       needs-updating: ${{ steps.compare-package-locks.outputs.needs-updating }}
     runs-on: ubuntu-latest
@@ -54,7 +83,7 @@ jobs:
         id: compare-package-locks
         run: |
           needsupdating=false
-          wget ${{ env.LOCK_FILE_URL }} -O current-locks.json
+          wget ${{ needs.determine-values.outputs.lock-file-url }} -O current-locks.json
           set -o pipefail
           test -n "${{ needs.generate-chart-locks.outputs.package_locks_b64 }}" \
             || { echo "::error::output package_locks_b64 did not contain base64 content generated from the previous step"; exit 2 ;}
@@ -70,13 +99,14 @@ jobs:
     needs: 
     - compare-package-lock-manifests
     - generate-chart-locks
+    - determine-values
     if: needs.compare-package-lock-manifests.outputs.needs-updating == 'true'
     runs-on: ubuntu-latest
     steps:
-      - name: Clone ${{ env.PR_DEST_BRANCH_NAME }} branch
+      - name: Clone ${{ needs.determine-values.outputs.pr-branch-name }} branch
         uses: actions/checkout@v3
         with:
-          ref: ${{ env.PR_DEST_BRANCH_NAME }}
+          ref: ${{ needs.determine-values.outputs.pr-branch-name }}
           # token: tbd
       - name: Set Git Config
         # TODO update the user name and email
@@ -112,7 +142,7 @@ jobs:
         # Settings.
         run: |
           body=$(echo -e "${{ env.PR_BODY }}\n\nThe generated lockfile's md5sum is: **${{ steps.commit-and-push.outputs.new_lockfile_md5sum }}**\n")
-          gh pr create -B ${{ env.PR_DEST_BRANCH_NAME }} -H ${{ steps.create-branch.outputs.branchname }} --title "${{ env.PR_TITLE }} - ${{ steps.commit-and-push.outputs.new_lockfile_md5sum }}" --body "${body}"
+          gh pr create -B ${{ needs.determine-values.outputs.pr-branch-name }} -H ${{ steps.create-branch.outputs.branchname }} --title "${{ env.PR_TITLE }} - ${{ steps.commit-and-push.outputs.new_lockfile_md5sum }}" --body "${body}"
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
           PR_TITLE: Updating Chart Locks
