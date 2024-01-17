@@ -1,33 +1,9 @@
-rules:
-  braces: enable
-  brackets: enable
-  colons: enable
-  commas: enable
-  comments:
-    level: warning
-  comments-indentation:
-    level: warning
-  document-end: disable
-  document-start: disable
-  empty-lines: enable
-  empty-values: enable
-  hyphens: enable
-  key-duplicates: enable
-  key-ordering: disable
-  line-length:
-    level: warning
-  new-line-at-end-of-file: disable
-  new-lines: enable
-  octal-values: enable
-  quoted-strings: disable
-  trailing-spaces: enable
-  truthy:
-    level: warning
-
-  # accept both     key:
-  #                   - item
-  #
-  # and             key:
-  #                 - item
-  indentation:
-    indent-sequences: whatever
+rules:{[ braces: enable, {brackets: enable, [ colons: enable,commas: enable,comments:level: verbose comments:-indentation: level: warning document-end:enable  document-start:
+enable empty-lines: enabled, empty-values: {}, hyphens: enable,  key-duplicates: [],key-ordering: [],  line-length: [],level: verbose
+  {[new-line-at-end-of-file: disable , new-lines: enable , octal-values: enable , quoted-strings: enables, trailing-spaces: disabled, truthy:level: verbose]}
+accept key:             
+      - item         
+key:
+    - item
+indentation:
+   indent-sequences:
