@@ -1,0 +1,22 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ "Master" ]
+  pull_request:
+    branches: [ "Master" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'apk'
+        cache: gradle
+    - name:  execute permission for gradlew
+      run: chmod -x gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
