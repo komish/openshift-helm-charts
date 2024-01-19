@@ -1,7 +1,7 @@
 Feature: OWNERS file submissions
     redhat can submit OWNERS file.
 
-    Scenario Outline: [HC-01-001] An OWNERS file is submitted by redhat
+    Scenario Outline: [HC-20-001] An OWNERS file is submitted by redhat
         Given a Red Hat OWNERS file is submitted for a chart with name "<chart_name>"
         When the vendor label set to "<vendor_label>" and vendor name set to "<vendor_name>"
         Then validation CI should conclude with result "<result>"

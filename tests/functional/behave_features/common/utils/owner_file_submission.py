@@ -303,7 +303,7 @@ class OwnersFileSubmissionsE2ETest:
             AssertionError if the conclusion does not match the expected_result.
         """
         try:
-            run_id = github.get_run_id_next(self.secrets, workflow_name, pr_number)
+            run_id = github.get_run_id(self.secrets, workflow_name, pr_number)
             conclusion = github.get_run_result(self.secrets, run_id)
             if conclusion == expected_result:
                 logging.info(
