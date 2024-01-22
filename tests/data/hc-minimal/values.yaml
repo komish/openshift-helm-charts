@@ -1,0 +1,5 @@
+# workloadImage runs the "sample workload" that we use for
+# e2e testing. This must have Python installed, as the sample
+# workload today runs the python SimpleHTTPServer.
+workloadImage: registry.access.redhat.com/ubi9/python-39:latest
+replicaCount: 1
