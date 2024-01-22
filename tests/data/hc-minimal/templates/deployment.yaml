@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deploy
+  labels:
+    {{- include "hc-minimal.selectorLabels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "hc-minimal.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "hc-minimal.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ include "hc-minimal.serviceAccountName" . }}
+      containers:
+        - name: simple-server
+          image: "{{ .Values.workloadImage }}"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8000
+              protocol: TCP
+          command: ["/bin/sh"]
+          args: 
+          - "-c"
+          - "cd $(mktemp -d) && echo '<h1>Helm Cert E2E Workload Test</h1>' >> index.html && python -m http.server"
+          securityContext:
+            capabilities:
+              drop: ["ALL"]
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            seccompProfile:
+              type: "RuntimeDefault"

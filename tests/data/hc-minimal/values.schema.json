@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/hc-minimal",
+    "definitions": {
+        "hc-minimal": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "workloadImage": {
+                    "type": "string"
+                },
+                "replicaCount": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "replicaCount",
+                "workloadImage"
+            ],
+            "title": "hc-minimal"
+        }
+    }
+}
