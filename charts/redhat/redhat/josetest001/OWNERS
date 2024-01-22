@@ -1,0 +1,9 @@
+chart:
+  name: josetest001
+  shortDescription: josetest001
+publicPgpKey: null
+users:
+- githubUsername: komish
+vendor:
+  label: redhat
+  name: Red Hat
