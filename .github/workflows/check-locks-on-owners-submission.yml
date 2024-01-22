@@ -57,19 +57,19 @@ jobs:
         env:
           pr_files_py: "${{ steps.get_files_changed.outputs.pr_files }}"
         run: |
-          # check if PR contains just one partner OWNERS file
+          # check if PR contains just one redhat/community OWNERS file
           pr_files=($(echo "$pr_files_py" | tr -d '[],'))
           echo "Files in PR: ${pr_files[@]}"
           eval first_file=${pr_files[0]}
           if [ ${#pr_files[@]} == 1 ]; then
             eval first_file=${pr_files[0]}
-            if [[ $first_file == "charts/partners/"*/*"/OWNERS" ]] ; then
+            if [[ $first_file == "charts/redhat/"*/*"/OWNERS" ]] || [[ $first_file == "charts/community/"*/*"/OWNERS" ]] ; then
                 echo "An OWNERS file has been modified or added"
                 echo "merge_pr=true" | tee -a $GITHUB_OUTPUT
             else
-              echo "The file in the PR is not a partner OWNERS file"
+              echo "The file in the PR is not a Red Hat or Community OWNERS file"
               echo "merge_pr=false" | tee -a $GITHUB_OUTPUT
-              echo "msg=ERROR: PR does not include a partner OWNERS file." >> $GITHUB_OUTPUT
+              echo "msg=ERROR: PR does not include a redhat/community OWNERS file." >> $GITHUB_OUTPUT
             fi
           else
             echo "The PR contains multiple files."
@@ -108,7 +108,18 @@ jobs:
             --emit-to-github-output \
             ${{ env.API_URL }}
 
+      # Only used to assert content of the OWNERS file.
+      - name: Checkout Pull Request
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.BOT_TOKEN }}
+          fetch-depth: 0
+          path: "pr-branch"
+
       - name: Ensure OWNERS content and path content align
+        working-directory: "pr-branch"
         id: fact-check
         run: |
           file=$(echo ${{ steps.get_files_changed.outputs.pr_files }} | yq .0)
