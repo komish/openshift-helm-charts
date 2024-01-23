@@ -1,0 +1,9 @@
+chart:
+  name: gsp
+  shortDescription: Share Passwords Securely 
+publicPgpKey: null
+users:
+- githubUsername: komish
+vendor:
+  label: concerthall2
+  name: Concert Hall
