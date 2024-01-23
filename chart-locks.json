@@ -1,5 +1,5 @@
 {
-  "generated": "2024-01-22T21:33:26.720035+00:00",
+  "generated": "2024-01-23T17:09:59.906052+00:00",
   "packages": {
     "1946": "partners/redhat-test/1946",
     "3e4r5": "partners/redhat-test/3e4r5",
@@ -210,6 +210,7 @@
     "rafay-operator-redhat": "partners/rafaysystems/rafay-operator-redhat",
     "rafm": "partners/mobileum/rafm",
     "redhat-dotnet-imagestreams": "redhat/redhat/redhat-dotnet-imagestreams",
+    "redhat-jose001": "redhat/redhat/redhat-jose001",
     "redhat-nodejs-imagestreams": "redhat/redhat/redhat-nodejs-imagestreams",
     "redhat-perl-imagestreams": "redhat/redhat/redhat-perl-imagestreams",
     "redhat-php-imagestreams": "redhat/redhat/redhat-php-imagestreams",
