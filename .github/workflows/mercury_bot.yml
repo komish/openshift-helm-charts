@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
+
       - name: Set up Python 3.x Part 1
         uses: actions/setup-python@v4
         with:
@@ -104,17 +104,28 @@ jobs:
           ./ve1/bin/extract-metadata-from-pr \
             --emit-to-github-output \
             ${{ env.API_URL }}
-          
+
+      # Only used to assert content of the OWNERS file.
+      - name: Checkout Pull Request
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.BOT_TOKEN }}
+          fetch-depth: 0
+          path: "pr-branch"
+
       # TODO: Implemented as a shell script temporarily. Future enhancement
       # would re-use some existing logic that we have for the Red Hat OWNERS
       # check, and build something similar for general use.
       - name: Ensure OWNERS content and path content align
+        working-directory: "pr-branch"
         id: fact-check
         run: |
           file=$(echo ${{ steps.get_files_changed.outputs.pr_files }} | yq .0)
           owner_contents_chart_name=$(yq '.chart.name' ${file})
           owner_contents_vendor_label=$(yq '.vendor.label' ${file})
-          echo "Chart Name Comparison: ${owner_contents_chart_name} = ${{ steps.gather-metadata.outputs.chart-name }}" 
+          echo "Chart Name Comparison: ${owner_contents_chart_name} = ${{ steps.gather-metadata.outputs.chart-name }}"
           echo "Vendor Label Comparison: ${owner_contents_vendor_label} = ${{ steps.gather-metadata.outputs.organization }}"
           test "${owner_contents_chart_name}" = "${{ steps.gather-metadata.outputs.chart-name }}"
           test "${owner_contents_vendor_label}" = "${{ steps.gather-metadata.outputs.organization }}"
@@ -162,7 +173,7 @@ jobs:
       - name: Approve PR
         id: approve_pr
         if: |
-          steps.check_for_owners.outputs.merge_pr == 'true' 
+          steps.check_for_owners.outputs.merge_pr == 'true'
           && steps.safe-to-merge.outputs.merge_pr == 'true'
         uses: hmarr/auto-approve-action@v3
         with:
