@@ -1,0 +1,9 @@
+chart:
+  name: test-mercury-bot-prs
+  shortDescription: testing things here
+publicPgpKey: null
+users:
+- githubUsername: komish
+vendor:
+  label: concerthall
+  name: Concert Hall
