@@ -1,4 +1,4 @@
-name: Check For Lock v2
+name: Check Chart Locks
 description: |
   Checks for the existence of chart-name in a given chart lock file. If a chart
   is found to be locked at the URL searched, the lockpath is returned should the
@@ -10,7 +10,14 @@ inputs:
   chart-name:
     required: true
     description:
-      Check the lock status of this chart by name.
+      The chart name to be locked.
+  # e.g. https://charts.openshift.io/chart-locks.json
+  lockfile-url-override:
+    required: false
+    description:
+      The exact URL for the lock file used for comparison. Ignored
+      if executing within openshift-helm-charts/charts. Internally defaulted
+      if empty.
   fail-workflow-if-locked:
     required: false
     default: 'false'
@@ -30,19 +37,37 @@ outputs:
 runs:
   using: composite
   steps:
-  - name: Generate Locks
-    id: generate-locks
-    uses: ./.github/actions/generate-chart-locks
+  - name: Resolve lockfile URL
+    id: resolve-lockfile
+    shell: bash
+    run: |
+      ref=$(if [ "${GITHUB_REF}" = "refs/heads/main" ]; then echo "refs/heads/gh-pages"; else echo "${GITHUB_REF}-gh-pages"; fi)
+      branch=$(echo ${ref} | awk -F / '{ print $NF }')
+      override=${{ inputs.lockfile-url-override }}
+      lockfileURL=${override:-"https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${branch}/chart-locks.json"}
+
+      if [ $GITHUB_REPOSITORY == "openshift-helm-charts/charts" ]; then
+        echo "Running in the production repository"
+        echo 'Ignoring input value: "${lockfileURL}"'
+        lockfileURL=https://charts.openshift.io/chart-locks.json
+      fi
+
+      echo "Using lockfile at path ${lockfileURL} for repository ${GITHUB_REPOSITORY}"
+      echo "lockfile-url=${lockfileURL}" | tee -a $GITHUB_OUTPUT
+
   - name: Check lockfile for chart lock
     id: check-for-chart-lock
     shell: bash
     run: |
       set -e
+      echo "Pulling locks from ${{ steps.resolve-lockfile.outputs.lockfile-url }}."
+      wget ${{ steps.resolve-lockfile.outputs.lockfile-url }} -O locks.json
+      
       echo "Ensuring expected key exists in lock JSON."
-      jq --exit-status .packages < ${{ steps.generate-locks.outputs.lockfile-path }}
+      jq --exit-status .packages < locks.json 
 
       echo "Checking if chart '${{ inputs.chart-name }}' is locked."
-      LOCK_PATH=$(jq -r '.packages."${{ inputs.chart-name }}"' < ${{ steps.generate-locks.outputs.lockfile-path }})
+      LOCK_PATH=$(jq -r '.packages."${{ inputs.chart-name }}"' < locks.json)
 
       echo "locked-to-path=${LOCK_PATH}" | tee -a $GITHUB_OUTPUT
 

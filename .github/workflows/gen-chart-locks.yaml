@@ -1,0 +1,33 @@
+name: test-chart-locks-v2
+on:
+  workflow_dispatch:
+    inputs:
+      chart-lock-status-for:
+        description: If set, check the lock state of this chart.
+        type: string
+        required: false
+        default: ""
+
+jobs:
+  generate-locks:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Generate locks
+      id: generate-locks
+      uses: ./.github/actions/generate-chart-locks
+    - name: Check fs
+      run: |
+        jq < ${{ steps.generate-locks.outputs.lockfile-path }}
+        md5sum ${{ steps.generate-locks.outputs.lockfile-path }}
+  check-lock-state:
+    runs-on: ubuntu-latest
+    if: inputs.chart-lock-status-for != ''
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ./.github/actions/check-for-lock
+      id: check-lock
+      with:
+        chart-name: ${{ inputs.chart-lock-status-for }}
+    - run: |
+        echo ${{ steps.check-lock.outputs.chart-is-locked }} - ${{ steps.check-lock.outputs.locked-to-path }}
