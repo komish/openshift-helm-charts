@@ -1,0 +1,73 @@
+name: Generate Chart Locks
+description: |
+  Generates chart locks. Places a chart-locks.json at the specified to-file
+  value.
+inputs:
+  to-file:
+    description: Where to write the chart-locks.json file.
+    default: "/tmp/chart-locks.json"
+    required: false
+outputs:
+  lockfile-path:
+    description: |
+      Where the lock file was written. Mostly placed as an output to simplify
+      workflows for callers.
+    value: ${{ steps.generate-chart-locks.outputs.lockfile-path }}
+runs:
+  using: composite
+  steps:
+    # TODO: Incomplete, but a starting point for E2E. Need to confirm what ref's
+    # value is in pull_request_target and pull_request scenarios.
+  - name: Resolve repository ref
+    id: resolve
+    shell: bash
+    run: |
+      set -e
+      # Start with the default value
+      resolvedRef="refs/heads/main"
+
+      # In E2E, pull_request_target CI workflows should have their branch name as their
+      # ref, so we strip out pr-branch.
+      grep -q -- "-pr-branch$" <<< "${GITHUB_REF}" &&\
+        { echo "Ref contains the pr-branch suffix"
+          echo "expecting this to be an E2E test."
+          echo "Stripping the -pr-branch suffix and setting ref accordingly"
+          resolvedRef=${GITHUB_REF%-pr-branch}
+          echo "resolvedRef is now ${resolvedRef}" ;}
+      
+      # Protect the production branch. Always use refs/heads/main there.
+      if [ $GITHUB_REPOSITORY == "openshift-helm-charts/sandbox" ]; then
+        echo "Running in the production repository."
+        echo "The only allowed ref is refs/heads/main."
+        resolvedRef="refs/heads/main"
+      fi
+
+      echo "ref=${resolvedRef}" | tee $GITHUB_OUTPUT
+  - name: Checkout
+    id: clone-repository
+    uses: actions/checkout@v3
+    with:
+      ref: ${{ steps.resolve.outputs.ref }}
+      path: temp-gen-chart-lock-repo
+  - name: Setting up python
+    uses: actions/setup-python@v4
+    with:
+      python-version: "3.10"
+  - name: Installing PyYaml
+    shell: bash
+    run: pip install PyYAML
+  - name: Generate lock file JSON from existing charts
+    working-directory: temp-gen-chart-lock-repo
+    id: generate-chart-locks
+    shell: bash
+    run: |
+      set -o pipefail
+      python scripts/src/packagemapping/generatelocks.py | jq | tee ${{ inputs.to-file }}
+      echo "lockfile-path=${{ inputs.to-file }}" | tee $GITHUB_OUTPUT
+  - name: Cleanup
+    id: cleanup
+    if: always()
+    shell: bash
+    run: |
+      rm -rf temp-gen-chart-lock-repo
+    
