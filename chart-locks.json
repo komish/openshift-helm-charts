@@ -1,5 +1,5 @@
 {
-  "generated": "2024-01-22T21:33:26.720035+00:00",
+  "generated": "2024-01-25T17:13:55.627372+00:00",
   "packages": {
     "1946": "partners/redhat-test/1946",
     "3e4r5": "partners/redhat-test/3e4r5",
@@ -220,6 +220,7 @@
     "redis-persistent": "redhat/redhat/redis-persistent",
     "redis-sed": "redhat/redhat/redis-sed",
     "risingwave": "partners/risingwavelabs/risingwave",
+    "rnd-configmap": "partners/concerthall/rnd-configmap",
     "sagent": "partners/granulate/sagent",
     "samplechart": "partners/redhat-arkady-test/samplechart",
     "semeru-transition": "redhat/redhat/semeru-transition",
