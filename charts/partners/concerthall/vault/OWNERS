@@ -1,0 +1,10 @@
+chart:
+  name: vault
+  shortDescription: testing
+providerDelivery: false
+publicPgpKey: null
+users:
+- githubUsername: komish
+vendor:
+  label: concerthall
+  name: Concert Hall
