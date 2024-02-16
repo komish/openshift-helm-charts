@@ -8,6 +8,8 @@ name: Chart Lock Generation Sanity Check
 
 on:
   push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -33,7 +35,9 @@ jobs:
       uses: ./.github/actions/generate-chart-locks
     - name: notify maintainers on failure
       id: notify
-      if: failure() && steps.generate.outcome == 'failure'
+      if: failure() \
+          && steps.generate.outcome == 'failure' \
+          && github.repository == 'openshift-helm-charts/charts'
       uses: archive/github-actions-slack@v2.7.0
       with:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
